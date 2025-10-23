@@ -1,0 +1,464 @@
+// GENERATED CODE
+using System;
+using System.Runtime.CompilerServices;
+using System.Diagnostics;
+
+#pragma warning disable 0660, 0661
+
+namespace Unity.Mathematics
+{
+    [DebuggerTypeProxy(typeof(half2.DebuggerProxy))]
+    public partial struct half2 : System.IEquatable<half2>, IFormattable
+    {
+        public half x;
+        public half y;
+
+        /// <summary>half2 zero value.</summary>
+        public static readonly half2 zero;
+
+        /// <summary>Constructs a half2 vector from two half values.</summary>
+        
+        public half2(half x, half y)
+        { 
+            this.x = x;
+            this.y = y;
+        }
+
+        /// <summary>Constructs a half2 vector from a half2 vector.</summary>
+        
+        public half2(half2 xy)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+        }
+
+        /// <summary>Constructs a half2 vector from a single half value by assigning it to every component.</summary>
+        
+        public half2(half v)
+        {
+            this.x = v;
+            this.y = v;
+        }
+
+        /// <summary>Constructs a half2 vector from a single float value by converting it to half and assigning it to every component.</summary>
+        
+        public half2(float v)
+        {
+            this.x = (half)v;
+            this.y = (half)v;
+        }
+
+        /// <summary>Constructs a half2 vector from a float2 vector by componentwise conversion.</summary>
+        
+        public half2(float2 v)
+        {
+            this.x = (half)v.x;
+            this.y = (half)v.y;
+        }
+
+        /// <summary>Constructs a half2 vector from a single double value by converting it to half and assigning it to every component.</summary>
+        
+        public half2(double v)
+        {
+            this.x = (half)v;
+            this.y = (half)v;
+        }
+
+        /// <summary>Constructs a half2 vector from a double2 vector by componentwise conversion.</summary>
+        
+        public half2(double2 v)
+        {
+            this.x = (half)v.x;
+            this.y = (half)v.y;
+        }
+
+
+        /// <summary>Implicitly converts a single half value to a half2 vector by assigning it to every component.</summary>
+        
+        public static implicit operator half2(half v) { return new half2(v); }
+
+        /// <summary>Explicitly converts a single float value to a half2 vector by converting it to half and assigning it to every component.</summary>
+        
+        public static explicit operator half2(float v) { return new half2(v); }
+
+        /// <summary>Explicitly converts a float2 vector to a half2 vector by componentwise conversion.</summary>
+        
+        public static explicit operator half2(float2 v) { return new half2(v); }
+
+        /// <summary>Explicitly converts a single double value to a half2 vector by converting it to half and assigning it to every component.</summary>
+        
+        public static explicit operator half2(double v) { return new half2(v); }
+
+        /// <summary>Explicitly converts a double2 vector to a half2 vector by componentwise conversion.</summary>
+        
+        public static explicit operator half2(double2 v) { return new half2(v); }
+
+
+        /// <summary>Returns the result of a componentwise equality operation on two half2 vectors.</summary>
+        
+        public static bool2 operator == (half2 lhs, half2 rhs) { return new bool2 (lhs.x == rhs.x, lhs.y == rhs.y); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a half2 vector and a half value.</summary>
+        
+        public static bool2 operator == (half2 lhs, half rhs) { return new bool2 (lhs.x == rhs, lhs.y == rhs); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a half value and a half2 vector.</summary>
+        
+        public static bool2 operator == (half lhs, half2 rhs) { return new bool2 (lhs == rhs.x, lhs == rhs.y); }
+
+
+        /// <summary>Returns the result of a componentwise not equal operation on two half2 vectors.</summary>
+        
+        public static bool2 operator != (half2 lhs, half2 rhs) { return new bool2 (lhs.x != rhs.x, lhs.y != rhs.y); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a half2 vector and a half value.</summary>
+        
+        public static bool2 operator != (half2 lhs, half rhs) { return new bool2 (lhs.x != rhs, lhs.y != rhs); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a half value and a half2 vector.</summary>
+        
+        public static bool2 operator != (half lhs, half2 rhs) { return new bool2 (lhs != rhs.x, lhs != rhs.y); }
+
+
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxxx
+        {
+            
+            get { return new half4(x, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxxy
+        {
+            
+            get { return new half4(x, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxyx
+        {
+            
+            get { return new half4(x, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxyy
+        {
+            
+            get { return new half4(x, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyxx
+        {
+            
+            get { return new half4(x, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyxy
+        {
+            
+            get { return new half4(x, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyyx
+        {
+            
+            get { return new half4(x, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyyy
+        {
+            
+            get { return new half4(x, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxxx
+        {
+            
+            get { return new half4(y, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxxy
+        {
+            
+            get { return new half4(y, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxyx
+        {
+            
+            get { return new half4(y, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxyy
+        {
+            
+            get { return new half4(y, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyxx
+        {
+            
+            get { return new half4(y, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyxy
+        {
+            
+            get { return new half4(y, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyyx
+        {
+            
+            get { return new half4(y, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyyy
+        {
+            
+            get { return new half4(y, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xxx
+        {
+            
+            get { return new half3(x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xxy
+        {
+            
+            get { return new half3(x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xyx
+        {
+            
+            get { return new half3(x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xyy
+        {
+            
+            get { return new half3(x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yxx
+        {
+            
+            get { return new half3(y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yxy
+        {
+            
+            get { return new half3(y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yyx
+        {
+            
+            get { return new half3(y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yyy
+        {
+            
+            get { return new half3(y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 xx
+        {
+            
+            get { return new half2(x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 xy
+        {
+            
+            get { return new half2(x, y); }
+            
+            set { x = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 yx
+        {
+            
+            get { return new half2(y, x); }
+            
+            set { y = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 yy
+        {
+            
+            get { return new half2(y, y); }
+        }
+
+
+
+        /// <summary>Returns the half element at a specified index.</summary>
+        unsafe public half this[int index]
+        {
+            get
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 2)
+                    throw new System.ArgumentException("index must be between[0...1]");
+#endif
+                fixed (half2* array = &this) { return ((half*)array)[index]; }
+            }
+            set
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 2)
+                    throw new System.ArgumentException("index must be between[0...1]");
+#endif
+                fixed (half* array = &x) { array[index] = value; }
+            }
+        }
+
+        /// <summary>Returns true if the half2 is equal to a given half2, false otherwise.</summary>
+        
+        public bool Equals(half2 rhs) { return x == rhs.x && y == rhs.y; }
+
+        /// <summary>Returns true if the half2 is equal to a given half2, false otherwise.</summary>
+        public override bool Equals(object o) { return Equals((half2)o); }
+
+
+        /// <summary>Returns a hash code for the half2.</summary>
+        
+        public override int GetHashCode() { return (int)math.hash(this); }
+
+
+        /// <summary>Returns a string representation of the half2.</summary>
+        
+        public override string ToString()
+        {
+            return string.Format("half2({0}, {1})", x, y);
+        }
+
+        /// <summary>Returns a string representation of the half2 using a specified format and culture-specific format information.</summary>
+        
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            return string.Format("half2({0}, {1})", x.ToString(format, formatProvider), y.ToString(format, formatProvider));
+        }
+
+        internal sealed class DebuggerProxy
+        {
+            public half x;
+            public half y;
+            public DebuggerProxy(half2 v)
+            {
+                x = v.x;
+                y = v.y;
+            }
+        }
+
+    }
+
+    public static partial class math
+    {
+        /// <summary>Returns a half2 vector constructed from two half values.</summary>
+        
+        public static half2 half2(half x, half y) { return new half2(x, y); }
+
+        /// <summary>Returns a half2 vector constructed from a half2 vector.</summary>
+        
+        public static half2 half2(half2 xy) { return new half2(xy); }
+
+        /// <summary>Returns a half2 vector constructed from a single half value by assigning it to every component.</summary>
+        
+        public static half2 half2(half v) { return new half2(v); }
+
+        /// <summary>Returns a half2 vector constructed from a single float value by converting it to half and assigning it to every component.</summary>
+        
+        public static half2 half2(float v) { return new half2(v); }
+
+        /// <summary>Return a half2 vector constructed from a float2 vector by componentwise conversion.</summary>
+        
+        public static half2 half2(float2 v) { return new half2(v); }
+
+        /// <summary>Returns a half2 vector constructed from a single double value by converting it to half and assigning it to every component.</summary>
+        
+        public static half2 half2(double v) { return new half2(v); }
+
+        /// <summary>Return a half2 vector constructed from a double2 vector by componentwise conversion.</summary>
+        
+        public static half2 half2(double2 v) { return new half2(v); }
+
+        /// <summary>Returns a uint hash code of a half2 vector.</summary>
+        
+        public static uint hash(half2 v)
+        {
+            return csum(uint2(v.x.value, v.y.value) * uint2(0x6E624EB7u, 0x7383ED49u)) + 0xDD49C23Bu;
+        }
+
+        /// <summary>
+        /// Returns a uint2 vector hash code of a half2 vector.
+        /// When multiple elements are to be hashes together, it can more efficient to calculate and combine wide hash
+        /// that are only reduced to a narrow uint hash at the very end instead of at every step.
+        /// </summary>
+        
+        public static uint2 hashwide(half2 v)
+        {
+            return (uint2(v.x.value, v.y.value) * uint2(0xEBD0D005u, 0x91475DF7u)) + 0x55E84827u;
+        }
+
+    }
+}

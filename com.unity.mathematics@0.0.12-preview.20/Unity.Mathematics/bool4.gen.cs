@@ -1,0 +1,3180 @@
+// GENERATED CODE
+using System;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Diagnostics;
+
+#pragma warning disable 0660, 0661
+
+namespace Unity.Mathematics
+{
+    [DebuggerTypeProxy(typeof(bool4.DebuggerProxy))]
+    [System.Serializable]
+    public partial struct bool4 : System.IEquatable<bool4>
+    {
+        [MarshalAs(UnmanagedType.U1)]
+        public bool x;
+        [MarshalAs(UnmanagedType.U1)]
+        public bool y;
+        [MarshalAs(UnmanagedType.U1)]
+        public bool z;
+        [MarshalAs(UnmanagedType.U1)]
+        public bool w;
+
+
+        /// <summary>Constructs a bool4 vector from four bool values.</summary>
+        
+        public bool4(bool x, bool y, bool z, bool w)
+        { 
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a bool4 vector from two bool values and a bool2 vector.</summary>
+        
+        public bool4(bool x, bool y, bool2 zw)
+        { 
+            this.x = x;
+            this.y = y;
+            this.z = zw.x;
+            this.w = zw.y;
+        }
+
+        /// <summary>Constructs a bool4 vector from a bool value, a bool2 vector and a bool value.</summary>
+        
+        public bool4(bool x, bool2 yz, bool w)
+        { 
+            this.x = x;
+            this.y = yz.x;
+            this.z = yz.y;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a bool4 vector from a bool value and a bool3 vector.</summary>
+        
+        public bool4(bool x, bool3 yzw)
+        { 
+            this.x = x;
+            this.y = yzw.x;
+            this.z = yzw.y;
+            this.w = yzw.z;
+        }
+
+        /// <summary>Constructs a bool4 vector from a bool2 vector and two bool values.</summary>
+        
+        public bool4(bool2 xy, bool z, bool w)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+            this.z = z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a bool4 vector from two bool2 vectors.</summary>
+        
+        public bool4(bool2 xy, bool2 zw)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+            this.z = zw.x;
+            this.w = zw.y;
+        }
+
+        /// <summary>Constructs a bool4 vector from a bool3 vector and a bool value.</summary>
+        
+        public bool4(bool3 xyz, bool w)
+        { 
+            this.x = xyz.x;
+            this.y = xyz.y;
+            this.z = xyz.z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a bool4 vector from a bool4 vector.</summary>
+        
+        public bool4(bool4 xyzw)
+        { 
+            this.x = xyzw.x;
+            this.y = xyzw.y;
+            this.z = xyzw.z;
+            this.w = xyzw.w;
+        }
+
+        /// <summary>Constructs a bool4 vector from a single bool value by assigning it to every component.</summary>
+        
+        public bool4(bool v)
+        {
+            this.x = v;
+            this.y = v;
+            this.z = v;
+            this.w = v;
+        }
+
+
+        /// <summary>Implicitly converts a single bool value to a bool4 vector by assigning it to every component.</summary>
+        
+        public static implicit operator bool4(bool v) { return new bool4(v); }
+
+
+        /// <summary>Returns the result of a componentwise equality operation on two bool4 vectors.</summary>
+        
+        public static bool4 operator == (bool4 lhs, bool4 rhs) { return new bool4 (lhs.x == rhs.x, lhs.y == rhs.y, lhs.z == rhs.z, lhs.w == rhs.w); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a bool4 vector and a bool value.</summary>
+        
+        public static bool4 operator == (bool4 lhs, bool rhs) { return new bool4 (lhs.x == rhs, lhs.y == rhs, lhs.z == rhs, lhs.w == rhs); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a bool value and a bool4 vector.</summary>
+        
+        public static bool4 operator == (bool lhs, bool4 rhs) { return new bool4 (lhs == rhs.x, lhs == rhs.y, lhs == rhs.z, lhs == rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise not equal operation on two bool4 vectors.</summary>
+        
+        public static bool4 operator != (bool4 lhs, bool4 rhs) { return new bool4 (lhs.x != rhs.x, lhs.y != rhs.y, lhs.z != rhs.z, lhs.w != rhs.w); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a bool4 vector and a bool value.</summary>
+        
+        public static bool4 operator != (bool4 lhs, bool rhs) { return new bool4 (lhs.x != rhs, lhs.y != rhs, lhs.z != rhs, lhs.w != rhs); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a bool value and a bool4 vector.</summary>
+        
+        public static bool4 operator != (bool lhs, bool4 rhs) { return new bool4 (lhs != rhs.x, lhs != rhs.y, lhs != rhs.z, lhs != rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise not operation on a bool4 vector.</summary>
+        
+        public static bool4 operator ! (bool4 val) { return new bool4 (!val.x, !val.y, !val.z, !val.w); }
+
+
+        /// <summary>Returns the result of a componentwise bitwise and operation on two bool4 vectors.</summary>
+        
+        public static bool4 operator & (bool4 lhs, bool4 rhs) { return new bool4 (lhs.x & rhs.x, lhs.y & rhs.y, lhs.z & rhs.z, lhs.w & rhs.w); }
+
+        /// <summary>Returns the result of a componentwise bitwise and operation on a bool4 vector and a bool value.</summary>
+        
+        public static bool4 operator & (bool4 lhs, bool rhs) { return new bool4 (lhs.x & rhs, lhs.y & rhs, lhs.z & rhs, lhs.w & rhs); }
+
+        /// <summary>Returns the result of a componentwise bitwise and operation on a bool value and a bool4 vector.</summary>
+        
+        public static bool4 operator & (bool lhs, bool4 rhs) { return new bool4 (lhs & rhs.x, lhs & rhs.y, lhs & rhs.z, lhs & rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise bitwise or operation on two bool4 vectors.</summary>
+        
+        public static bool4 operator | (bool4 lhs, bool4 rhs) { return new bool4 (lhs.x | rhs.x, lhs.y | rhs.y, lhs.z | rhs.z, lhs.w | rhs.w); }
+
+        /// <summary>Returns the result of a componentwise bitwise or operation on a bool4 vector and a bool value.</summary>
+        
+        public static bool4 operator | (bool4 lhs, bool rhs) { return new bool4 (lhs.x | rhs, lhs.y | rhs, lhs.z | rhs, lhs.w | rhs); }
+
+        /// <summary>Returns the result of a componentwise bitwise or operation on a bool value and a bool4 vector.</summary>
+        
+        public static bool4 operator | (bool lhs, bool4 rhs) { return new bool4 (lhs | rhs.x, lhs | rhs.y, lhs | rhs.z, lhs | rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise bitwise exclusive or operation on two bool4 vectors.</summary>
+        
+        public static bool4 operator ^ (bool4 lhs, bool4 rhs) { return new bool4 (lhs.x ^ rhs.x, lhs.y ^ rhs.y, lhs.z ^ rhs.z, lhs.w ^ rhs.w); }
+
+        /// <summary>Returns the result of a componentwise bitwise exclusive or operation on a bool4 vector and a bool value.</summary>
+        
+        public static bool4 operator ^ (bool4 lhs, bool rhs) { return new bool4 (lhs.x ^ rhs, lhs.y ^ rhs, lhs.z ^ rhs, lhs.w ^ rhs); }
+
+        /// <summary>Returns the result of a componentwise bitwise exclusive or operation on a bool value and a bool4 vector.</summary>
+        
+        public static bool4 operator ^ (bool lhs, bool4 rhs) { return new bool4 (lhs ^ rhs.x, lhs ^ rhs.y, lhs ^ rhs.z, lhs ^ rhs.w); }
+
+
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxxx
+        {
+            
+            get { return new bool4(x, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxxy
+        {
+            
+            get { return new bool4(x, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxxz
+        {
+            
+            get { return new bool4(x, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxxw
+        {
+            
+            get { return new bool4(x, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxyx
+        {
+            
+            get { return new bool4(x, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxyy
+        {
+            
+            get { return new bool4(x, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxyz
+        {
+            
+            get { return new bool4(x, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxyw
+        {
+            
+            get { return new bool4(x, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxzx
+        {
+            
+            get { return new bool4(x, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxzy
+        {
+            
+            get { return new bool4(x, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxzz
+        {
+            
+            get { return new bool4(x, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxzw
+        {
+            
+            get { return new bool4(x, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxwx
+        {
+            
+            get { return new bool4(x, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxwy
+        {
+            
+            get { return new bool4(x, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxwz
+        {
+            
+            get { return new bool4(x, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xxww
+        {
+            
+            get { return new bool4(x, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyxx
+        {
+            
+            get { return new bool4(x, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyxy
+        {
+            
+            get { return new bool4(x, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyxz
+        {
+            
+            get { return new bool4(x, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyxw
+        {
+            
+            get { return new bool4(x, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyyx
+        {
+            
+            get { return new bool4(x, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyyy
+        {
+            
+            get { return new bool4(x, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyyz
+        {
+            
+            get { return new bool4(x, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyyw
+        {
+            
+            get { return new bool4(x, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyzx
+        {
+            
+            get { return new bool4(x, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyzy
+        {
+            
+            get { return new bool4(x, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyzz
+        {
+            
+            get { return new bool4(x, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyzw
+        {
+            
+            get { return new bool4(x, y, z, w); }
+            
+            set { x = value.x; y = value.y; z = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xywx
+        {
+            
+            get { return new bool4(x, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xywy
+        {
+            
+            get { return new bool4(x, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xywz
+        {
+            
+            get { return new bool4(x, y, w, z); }
+            
+            set { x = value.x; y = value.y; w = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xyww
+        {
+            
+            get { return new bool4(x, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzxx
+        {
+            
+            get { return new bool4(x, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzxy
+        {
+            
+            get { return new bool4(x, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzxz
+        {
+            
+            get { return new bool4(x, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzxw
+        {
+            
+            get { return new bool4(x, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzyx
+        {
+            
+            get { return new bool4(x, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzyy
+        {
+            
+            get { return new bool4(x, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzyz
+        {
+            
+            get { return new bool4(x, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzyw
+        {
+            
+            get { return new bool4(x, z, y, w); }
+            
+            set { x = value.x; z = value.y; y = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzzx
+        {
+            
+            get { return new bool4(x, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzzy
+        {
+            
+            get { return new bool4(x, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzzz
+        {
+            
+            get { return new bool4(x, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzzw
+        {
+            
+            get { return new bool4(x, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzwx
+        {
+            
+            get { return new bool4(x, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzwy
+        {
+            
+            get { return new bool4(x, z, w, y); }
+            
+            set { x = value.x; z = value.y; w = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzwz
+        {
+            
+            get { return new bool4(x, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xzww
+        {
+            
+            get { return new bool4(x, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwxx
+        {
+            
+            get { return new bool4(x, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwxy
+        {
+            
+            get { return new bool4(x, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwxz
+        {
+            
+            get { return new bool4(x, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwxw
+        {
+            
+            get { return new bool4(x, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwyx
+        {
+            
+            get { return new bool4(x, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwyy
+        {
+            
+            get { return new bool4(x, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwyz
+        {
+            
+            get { return new bool4(x, w, y, z); }
+            
+            set { x = value.x; w = value.y; y = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwyw
+        {
+            
+            get { return new bool4(x, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwzx
+        {
+            
+            get { return new bool4(x, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwzy
+        {
+            
+            get { return new bool4(x, w, z, y); }
+            
+            set { x = value.x; w = value.y; z = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwzz
+        {
+            
+            get { return new bool4(x, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwzw
+        {
+            
+            get { return new bool4(x, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwwx
+        {
+            
+            get { return new bool4(x, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwwy
+        {
+            
+            get { return new bool4(x, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwwz
+        {
+            
+            get { return new bool4(x, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 xwww
+        {
+            
+            get { return new bool4(x, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxxx
+        {
+            
+            get { return new bool4(y, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxxy
+        {
+            
+            get { return new bool4(y, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxxz
+        {
+            
+            get { return new bool4(y, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxxw
+        {
+            
+            get { return new bool4(y, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxyx
+        {
+            
+            get { return new bool4(y, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxyy
+        {
+            
+            get { return new bool4(y, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxyz
+        {
+            
+            get { return new bool4(y, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxyw
+        {
+            
+            get { return new bool4(y, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxzx
+        {
+            
+            get { return new bool4(y, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxzy
+        {
+            
+            get { return new bool4(y, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxzz
+        {
+            
+            get { return new bool4(y, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxzw
+        {
+            
+            get { return new bool4(y, x, z, w); }
+            
+            set { y = value.x; x = value.y; z = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxwx
+        {
+            
+            get { return new bool4(y, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxwy
+        {
+            
+            get { return new bool4(y, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxwz
+        {
+            
+            get { return new bool4(y, x, w, z); }
+            
+            set { y = value.x; x = value.y; w = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yxww
+        {
+            
+            get { return new bool4(y, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyxx
+        {
+            
+            get { return new bool4(y, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyxy
+        {
+            
+            get { return new bool4(y, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyxz
+        {
+            
+            get { return new bool4(y, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyxw
+        {
+            
+            get { return new bool4(y, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyyx
+        {
+            
+            get { return new bool4(y, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyyy
+        {
+            
+            get { return new bool4(y, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyyz
+        {
+            
+            get { return new bool4(y, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyyw
+        {
+            
+            get { return new bool4(y, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyzx
+        {
+            
+            get { return new bool4(y, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyzy
+        {
+            
+            get { return new bool4(y, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyzz
+        {
+            
+            get { return new bool4(y, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyzw
+        {
+            
+            get { return new bool4(y, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yywx
+        {
+            
+            get { return new bool4(y, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yywy
+        {
+            
+            get { return new bool4(y, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yywz
+        {
+            
+            get { return new bool4(y, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yyww
+        {
+            
+            get { return new bool4(y, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzxx
+        {
+            
+            get { return new bool4(y, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzxy
+        {
+            
+            get { return new bool4(y, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzxz
+        {
+            
+            get { return new bool4(y, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzxw
+        {
+            
+            get { return new bool4(y, z, x, w); }
+            
+            set { y = value.x; z = value.y; x = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzyx
+        {
+            
+            get { return new bool4(y, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzyy
+        {
+            
+            get { return new bool4(y, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzyz
+        {
+            
+            get { return new bool4(y, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzyw
+        {
+            
+            get { return new bool4(y, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzzx
+        {
+            
+            get { return new bool4(y, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzzy
+        {
+            
+            get { return new bool4(y, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzzz
+        {
+            
+            get { return new bool4(y, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzzw
+        {
+            
+            get { return new bool4(y, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzwx
+        {
+            
+            get { return new bool4(y, z, w, x); }
+            
+            set { y = value.x; z = value.y; w = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzwy
+        {
+            
+            get { return new bool4(y, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzwz
+        {
+            
+            get { return new bool4(y, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 yzww
+        {
+            
+            get { return new bool4(y, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywxx
+        {
+            
+            get { return new bool4(y, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywxy
+        {
+            
+            get { return new bool4(y, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywxz
+        {
+            
+            get { return new bool4(y, w, x, z); }
+            
+            set { y = value.x; w = value.y; x = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywxw
+        {
+            
+            get { return new bool4(y, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywyx
+        {
+            
+            get { return new bool4(y, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywyy
+        {
+            
+            get { return new bool4(y, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywyz
+        {
+            
+            get { return new bool4(y, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywyw
+        {
+            
+            get { return new bool4(y, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywzx
+        {
+            
+            get { return new bool4(y, w, z, x); }
+            
+            set { y = value.x; w = value.y; z = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywzy
+        {
+            
+            get { return new bool4(y, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywzz
+        {
+            
+            get { return new bool4(y, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywzw
+        {
+            
+            get { return new bool4(y, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywwx
+        {
+            
+            get { return new bool4(y, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywwy
+        {
+            
+            get { return new bool4(y, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywwz
+        {
+            
+            get { return new bool4(y, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 ywww
+        {
+            
+            get { return new bool4(y, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxxx
+        {
+            
+            get { return new bool4(z, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxxy
+        {
+            
+            get { return new bool4(z, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxxz
+        {
+            
+            get { return new bool4(z, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxxw
+        {
+            
+            get { return new bool4(z, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxyx
+        {
+            
+            get { return new bool4(z, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxyy
+        {
+            
+            get { return new bool4(z, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxyz
+        {
+            
+            get { return new bool4(z, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxyw
+        {
+            
+            get { return new bool4(z, x, y, w); }
+            
+            set { z = value.x; x = value.y; y = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxzx
+        {
+            
+            get { return new bool4(z, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxzy
+        {
+            
+            get { return new bool4(z, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxzz
+        {
+            
+            get { return new bool4(z, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxzw
+        {
+            
+            get { return new bool4(z, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxwx
+        {
+            
+            get { return new bool4(z, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxwy
+        {
+            
+            get { return new bool4(z, x, w, y); }
+            
+            set { z = value.x; x = value.y; w = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxwz
+        {
+            
+            get { return new bool4(z, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zxww
+        {
+            
+            get { return new bool4(z, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyxx
+        {
+            
+            get { return new bool4(z, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyxy
+        {
+            
+            get { return new bool4(z, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyxz
+        {
+            
+            get { return new bool4(z, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyxw
+        {
+            
+            get { return new bool4(z, y, x, w); }
+            
+            set { z = value.x; y = value.y; x = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyyx
+        {
+            
+            get { return new bool4(z, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyyy
+        {
+            
+            get { return new bool4(z, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyyz
+        {
+            
+            get { return new bool4(z, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyyw
+        {
+            
+            get { return new bool4(z, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyzx
+        {
+            
+            get { return new bool4(z, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyzy
+        {
+            
+            get { return new bool4(z, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyzz
+        {
+            
+            get { return new bool4(z, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyzw
+        {
+            
+            get { return new bool4(z, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zywx
+        {
+            
+            get { return new bool4(z, y, w, x); }
+            
+            set { z = value.x; y = value.y; w = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zywy
+        {
+            
+            get { return new bool4(z, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zywz
+        {
+            
+            get { return new bool4(z, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zyww
+        {
+            
+            get { return new bool4(z, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzxx
+        {
+            
+            get { return new bool4(z, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzxy
+        {
+            
+            get { return new bool4(z, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzxz
+        {
+            
+            get { return new bool4(z, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzxw
+        {
+            
+            get { return new bool4(z, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzyx
+        {
+            
+            get { return new bool4(z, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzyy
+        {
+            
+            get { return new bool4(z, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzyz
+        {
+            
+            get { return new bool4(z, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzyw
+        {
+            
+            get { return new bool4(z, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzzx
+        {
+            
+            get { return new bool4(z, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzzy
+        {
+            
+            get { return new bool4(z, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzzz
+        {
+            
+            get { return new bool4(z, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzzw
+        {
+            
+            get { return new bool4(z, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzwx
+        {
+            
+            get { return new bool4(z, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzwy
+        {
+            
+            get { return new bool4(z, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzwz
+        {
+            
+            get { return new bool4(z, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zzww
+        {
+            
+            get { return new bool4(z, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwxx
+        {
+            
+            get { return new bool4(z, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwxy
+        {
+            
+            get { return new bool4(z, w, x, y); }
+            
+            set { z = value.x; w = value.y; x = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwxz
+        {
+            
+            get { return new bool4(z, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwxw
+        {
+            
+            get { return new bool4(z, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwyx
+        {
+            
+            get { return new bool4(z, w, y, x); }
+            
+            set { z = value.x; w = value.y; y = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwyy
+        {
+            
+            get { return new bool4(z, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwyz
+        {
+            
+            get { return new bool4(z, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwyw
+        {
+            
+            get { return new bool4(z, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwzx
+        {
+            
+            get { return new bool4(z, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwzy
+        {
+            
+            get { return new bool4(z, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwzz
+        {
+            
+            get { return new bool4(z, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwzw
+        {
+            
+            get { return new bool4(z, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwwx
+        {
+            
+            get { return new bool4(z, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwwy
+        {
+            
+            get { return new bool4(z, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwwz
+        {
+            
+            get { return new bool4(z, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 zwww
+        {
+            
+            get { return new bool4(z, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxxx
+        {
+            
+            get { return new bool4(w, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxxy
+        {
+            
+            get { return new bool4(w, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxxz
+        {
+            
+            get { return new bool4(w, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxxw
+        {
+            
+            get { return new bool4(w, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxyx
+        {
+            
+            get { return new bool4(w, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxyy
+        {
+            
+            get { return new bool4(w, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxyz
+        {
+            
+            get { return new bool4(w, x, y, z); }
+            
+            set { w = value.x; x = value.y; y = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxyw
+        {
+            
+            get { return new bool4(w, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxzx
+        {
+            
+            get { return new bool4(w, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxzy
+        {
+            
+            get { return new bool4(w, x, z, y); }
+            
+            set { w = value.x; x = value.y; z = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxzz
+        {
+            
+            get { return new bool4(w, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxzw
+        {
+            
+            get { return new bool4(w, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxwx
+        {
+            
+            get { return new bool4(w, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxwy
+        {
+            
+            get { return new bool4(w, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxwz
+        {
+            
+            get { return new bool4(w, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wxww
+        {
+            
+            get { return new bool4(w, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyxx
+        {
+            
+            get { return new bool4(w, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyxy
+        {
+            
+            get { return new bool4(w, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyxz
+        {
+            
+            get { return new bool4(w, y, x, z); }
+            
+            set { w = value.x; y = value.y; x = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyxw
+        {
+            
+            get { return new bool4(w, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyyx
+        {
+            
+            get { return new bool4(w, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyyy
+        {
+            
+            get { return new bool4(w, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyyz
+        {
+            
+            get { return new bool4(w, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyyw
+        {
+            
+            get { return new bool4(w, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyzx
+        {
+            
+            get { return new bool4(w, y, z, x); }
+            
+            set { w = value.x; y = value.y; z = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyzy
+        {
+            
+            get { return new bool4(w, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyzz
+        {
+            
+            get { return new bool4(w, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyzw
+        {
+            
+            get { return new bool4(w, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wywx
+        {
+            
+            get { return new bool4(w, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wywy
+        {
+            
+            get { return new bool4(w, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wywz
+        {
+            
+            get { return new bool4(w, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wyww
+        {
+            
+            get { return new bool4(w, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzxx
+        {
+            
+            get { return new bool4(w, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzxy
+        {
+            
+            get { return new bool4(w, z, x, y); }
+            
+            set { w = value.x; z = value.y; x = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzxz
+        {
+            
+            get { return new bool4(w, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzxw
+        {
+            
+            get { return new bool4(w, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzyx
+        {
+            
+            get { return new bool4(w, z, y, x); }
+            
+            set { w = value.x; z = value.y; y = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzyy
+        {
+            
+            get { return new bool4(w, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzyz
+        {
+            
+            get { return new bool4(w, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzyw
+        {
+            
+            get { return new bool4(w, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzzx
+        {
+            
+            get { return new bool4(w, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzzy
+        {
+            
+            get { return new bool4(w, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzzz
+        {
+            
+            get { return new bool4(w, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzzw
+        {
+            
+            get { return new bool4(w, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzwx
+        {
+            
+            get { return new bool4(w, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzwy
+        {
+            
+            get { return new bool4(w, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzwz
+        {
+            
+            get { return new bool4(w, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wzww
+        {
+            
+            get { return new bool4(w, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwxx
+        {
+            
+            get { return new bool4(w, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwxy
+        {
+            
+            get { return new bool4(w, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwxz
+        {
+            
+            get { return new bool4(w, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwxw
+        {
+            
+            get { return new bool4(w, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwyx
+        {
+            
+            get { return new bool4(w, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwyy
+        {
+            
+            get { return new bool4(w, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwyz
+        {
+            
+            get { return new bool4(w, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwyw
+        {
+            
+            get { return new bool4(w, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwzx
+        {
+            
+            get { return new bool4(w, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwzy
+        {
+            
+            get { return new bool4(w, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwzz
+        {
+            
+            get { return new bool4(w, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwzw
+        {
+            
+            get { return new bool4(w, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwwx
+        {
+            
+            get { return new bool4(w, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwwy
+        {
+            
+            get { return new bool4(w, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwwz
+        {
+            
+            get { return new bool4(w, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool4 wwww
+        {
+            
+            get { return new bool4(w, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xxx
+        {
+            
+            get { return new bool3(x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xxy
+        {
+            
+            get { return new bool3(x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xxz
+        {
+            
+            get { return new bool3(x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xxw
+        {
+            
+            get { return new bool3(x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xyx
+        {
+            
+            get { return new bool3(x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xyy
+        {
+            
+            get { return new bool3(x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xyz
+        {
+            
+            get { return new bool3(x, y, z); }
+            
+            set { x = value.x; y = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xyw
+        {
+            
+            get { return new bool3(x, y, w); }
+            
+            set { x = value.x; y = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xzx
+        {
+            
+            get { return new bool3(x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xzy
+        {
+            
+            get { return new bool3(x, z, y); }
+            
+            set { x = value.x; z = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xzz
+        {
+            
+            get { return new bool3(x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xzw
+        {
+            
+            get { return new bool3(x, z, w); }
+            
+            set { x = value.x; z = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xwx
+        {
+            
+            get { return new bool3(x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xwy
+        {
+            
+            get { return new bool3(x, w, y); }
+            
+            set { x = value.x; w = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xwz
+        {
+            
+            get { return new bool3(x, w, z); }
+            
+            set { x = value.x; w = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 xww
+        {
+            
+            get { return new bool3(x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yxx
+        {
+            
+            get { return new bool3(y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yxy
+        {
+            
+            get { return new bool3(y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yxz
+        {
+            
+            get { return new bool3(y, x, z); }
+            
+            set { y = value.x; x = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yxw
+        {
+            
+            get { return new bool3(y, x, w); }
+            
+            set { y = value.x; x = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yyx
+        {
+            
+            get { return new bool3(y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yyy
+        {
+            
+            get { return new bool3(y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yyz
+        {
+            
+            get { return new bool3(y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yyw
+        {
+            
+            get { return new bool3(y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yzx
+        {
+            
+            get { return new bool3(y, z, x); }
+            
+            set { y = value.x; z = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yzy
+        {
+            
+            get { return new bool3(y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yzz
+        {
+            
+            get { return new bool3(y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yzw
+        {
+            
+            get { return new bool3(y, z, w); }
+            
+            set { y = value.x; z = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 ywx
+        {
+            
+            get { return new bool3(y, w, x); }
+            
+            set { y = value.x; w = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 ywy
+        {
+            
+            get { return new bool3(y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 ywz
+        {
+            
+            get { return new bool3(y, w, z); }
+            
+            set { y = value.x; w = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 yww
+        {
+            
+            get { return new bool3(y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zxx
+        {
+            
+            get { return new bool3(z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zxy
+        {
+            
+            get { return new bool3(z, x, y); }
+            
+            set { z = value.x; x = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zxz
+        {
+            
+            get { return new bool3(z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zxw
+        {
+            
+            get { return new bool3(z, x, w); }
+            
+            set { z = value.x; x = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zyx
+        {
+            
+            get { return new bool3(z, y, x); }
+            
+            set { z = value.x; y = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zyy
+        {
+            
+            get { return new bool3(z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zyz
+        {
+            
+            get { return new bool3(z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zyw
+        {
+            
+            get { return new bool3(z, y, w); }
+            
+            set { z = value.x; y = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zzx
+        {
+            
+            get { return new bool3(z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zzy
+        {
+            
+            get { return new bool3(z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zzz
+        {
+            
+            get { return new bool3(z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zzw
+        {
+            
+            get { return new bool3(z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zwx
+        {
+            
+            get { return new bool3(z, w, x); }
+            
+            set { z = value.x; w = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zwy
+        {
+            
+            get { return new bool3(z, w, y); }
+            
+            set { z = value.x; w = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zwz
+        {
+            
+            get { return new bool3(z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 zww
+        {
+            
+            get { return new bool3(z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wxx
+        {
+            
+            get { return new bool3(w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wxy
+        {
+            
+            get { return new bool3(w, x, y); }
+            
+            set { w = value.x; x = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wxz
+        {
+            
+            get { return new bool3(w, x, z); }
+            
+            set { w = value.x; x = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wxw
+        {
+            
+            get { return new bool3(w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wyx
+        {
+            
+            get { return new bool3(w, y, x); }
+            
+            set { w = value.x; y = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wyy
+        {
+            
+            get { return new bool3(w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wyz
+        {
+            
+            get { return new bool3(w, y, z); }
+            
+            set { w = value.x; y = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wyw
+        {
+            
+            get { return new bool3(w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wzx
+        {
+            
+            get { return new bool3(w, z, x); }
+            
+            set { w = value.x; z = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wzy
+        {
+            
+            get { return new bool3(w, z, y); }
+            
+            set { w = value.x; z = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wzz
+        {
+            
+            get { return new bool3(w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wzw
+        {
+            
+            get { return new bool3(w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wwx
+        {
+            
+            get { return new bool3(w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wwy
+        {
+            
+            get { return new bool3(w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 wwz
+        {
+            
+            get { return new bool3(w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool3 www
+        {
+            
+            get { return new bool3(w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 xx
+        {
+            
+            get { return new bool2(x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 xy
+        {
+            
+            get { return new bool2(x, y); }
+            
+            set { x = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 xz
+        {
+            
+            get { return new bool2(x, z); }
+            
+            set { x = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 xw
+        {
+            
+            get { return new bool2(x, w); }
+            
+            set { x = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 yx
+        {
+            
+            get { return new bool2(y, x); }
+            
+            set { y = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 yy
+        {
+            
+            get { return new bool2(y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 yz
+        {
+            
+            get { return new bool2(y, z); }
+            
+            set { y = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 yw
+        {
+            
+            get { return new bool2(y, w); }
+            
+            set { y = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 zx
+        {
+            
+            get { return new bool2(z, x); }
+            
+            set { z = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 zy
+        {
+            
+            get { return new bool2(z, y); }
+            
+            set { z = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 zz
+        {
+            
+            get { return new bool2(z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 zw
+        {
+            
+            get { return new bool2(z, w); }
+            
+            set { z = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 wx
+        {
+            
+            get { return new bool2(w, x); }
+            
+            set { w = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 wy
+        {
+            
+            get { return new bool2(w, y); }
+            
+            set { w = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 wz
+        {
+            
+            get { return new bool2(w, z); }
+            
+            set { w = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public bool2 ww
+        {
+            
+            get { return new bool2(w, w); }
+        }
+
+
+
+        /// <summary>Returns the bool element at a specified index.</summary>
+        unsafe public bool this[int index]
+        {
+            get
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 4)
+                    throw new System.ArgumentException("index must be between[0...3]");
+#endif
+                fixed (bool4* array = &this) { return ((bool*)array)[index]; }
+            }
+            set
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 4)
+                    throw new System.ArgumentException("index must be between[0...3]");
+#endif
+                fixed (bool* array = &x) { array[index] = value; }
+            }
+        }
+
+        /// <summary>Returns true if the bool4 is equal to a given bool4, false otherwise.</summary>
+        
+        public bool Equals(bool4 rhs) { return x == rhs.x && y == rhs.y && z == rhs.z && w == rhs.w; }
+
+        /// <summary>Returns true if the bool4 is equal to a given bool4, false otherwise.</summary>
+        public override bool Equals(object o) { return Equals((bool4)o); }
+
+
+        /// <summary>Returns a hash code for the bool4.</summary>
+        
+        public override int GetHashCode() { return (int)math.hash(this); }
+
+
+        /// <summary>Returns a string representation of the bool4.</summary>
+        
+        public override string ToString()
+        {
+            return string.Format("bool4({0}, {1}, {2}, {3})", x, y, z, w);
+        }
+
+        internal sealed class DebuggerProxy
+        {
+            public bool x;
+            public bool y;
+            public bool z;
+            public bool w;
+            public DebuggerProxy(bool4 v)
+            {
+                x = v.x;
+                y = v.y;
+                z = v.z;
+                w = v.w;
+            }
+        }
+
+    }
+
+    public static partial class math
+    {
+        /// <summary>Returns a bool4 vector constructed from four bool values.</summary>
+        
+        public static bool4 bool4(bool x, bool y, bool z, bool w) { return new bool4(x, y, z, w); }
+
+        /// <summary>Returns a bool4 vector constructed from two bool values and a bool2 vector.</summary>
+        
+        public static bool4 bool4(bool x, bool y, bool2 zw) { return new bool4(x, y, zw); }
+
+        /// <summary>Returns a bool4 vector constructed from a bool value, a bool2 vector and a bool value.</summary>
+        
+        public static bool4 bool4(bool x, bool2 yz, bool w) { return new bool4(x, yz, w); }
+
+        /// <summary>Returns a bool4 vector constructed from a bool value and a bool3 vector.</summary>
+        
+        public static bool4 bool4(bool x, bool3 yzw) { return new bool4(x, yzw); }
+
+        /// <summary>Returns a bool4 vector constructed from a bool2 vector and two bool values.</summary>
+        
+        public static bool4 bool4(bool2 xy, bool z, bool w) { return new bool4(xy, z, w); }
+
+        /// <summary>Returns a bool4 vector constructed from two bool2 vectors.</summary>
+        
+        public static bool4 bool4(bool2 xy, bool2 zw) { return new bool4(xy, zw); }
+
+        /// <summary>Returns a bool4 vector constructed from a bool3 vector and a bool value.</summary>
+        
+        public static bool4 bool4(bool3 xyz, bool w) { return new bool4(xyz, w); }
+
+        /// <summary>Returns a bool4 vector constructed from a bool4 vector.</summary>
+        
+        public static bool4 bool4(bool4 xyzw) { return new bool4(xyzw); }
+
+        /// <summary>Returns a bool4 vector constructed from a single bool value by assigning it to every component.</summary>
+        
+        public static bool4 bool4(bool v) { return new bool4(v); }
+
+        /// <summary>Returns a uint hash code of a bool4 vector.</summary>
+        
+        public static uint hash(bool4 v)
+        {
+            return csum(select(uint4(0x5FFF6B19u, 0x5E6CBF3Bu, 0xB546F2A5u, 0xBBCF63E7u), uint4(0xC53F4755u, 0x6985C229u, 0xE133B0B3u, 0xC3E0A3B9u), v));
+        }
+
+        /// <summary>
+        /// Returns a uint4 vector hash code of a bool4 vector.
+        /// When multiple elements are to be hashes together, it can more efficient to calculate and combine wide hash
+        /// that are only reduced to a narrow uint hash at the very end instead of at every step.
+        /// </summary>
+        
+        public static uint4 hashwide(bool4 v)
+        {
+            return (select(uint4(0xFE31134Fu, 0x712A34D7u, 0x9D77A59Bu, 0x4942CA39u), uint4(0xB40EC62Du, 0x565ED63Fu, 0x93C30C2Bu, 0xDCAF0351u), v));
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two bool4 vectors into a bool value.</summary>
+        
+        public static bool shuffle(bool4 a, bool4 b, ShuffleComponent x)
+        {
+            return select_shuffle_component(a, b, x);
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two bool4 vectors into a bool2 vector.</summary>
+        
+        public static bool2 shuffle(bool4 a, bool4 b, ShuffleComponent x, ShuffleComponent y)
+        {
+            return bool2(
+                select_shuffle_component(a, b, x),
+                select_shuffle_component(a, b, y));
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two bool4 vectors into a bool3 vector.</summary>
+        
+        public static bool3 shuffle(bool4 a, bool4 b, ShuffleComponent x, ShuffleComponent y, ShuffleComponent z)
+        {
+            return bool3(
+                select_shuffle_component(a, b, x),
+                select_shuffle_component(a, b, y),
+                select_shuffle_component(a, b, z));
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two bool4 vectors into a bool4 vector.</summary>
+        
+        public static bool4 shuffle(bool4 a, bool4 b, ShuffleComponent x, ShuffleComponent y, ShuffleComponent z, ShuffleComponent w)
+        {
+            return bool4(
+                select_shuffle_component(a, b, x),
+                select_shuffle_component(a, b, y),
+                select_shuffle_component(a, b, z),
+                select_shuffle_component(a, b, w));
+        }
+
+        
+        internal static bool select_shuffle_component(bool4 a, bool4 b, ShuffleComponent component)
+        {
+            switch(component)
+            {
+                case ShuffleComponent.LeftX:
+                    return a.x;
+                case ShuffleComponent.LeftY:
+                    return a.y;
+                case ShuffleComponent.LeftZ:
+                    return a.z;
+                case ShuffleComponent.LeftW:
+                    return a.w;
+                case ShuffleComponent.RightX:
+                    return b.x;
+                case ShuffleComponent.RightY:
+                    return b.y;
+                case ShuffleComponent.RightZ:
+                    return b.z;
+                case ShuffleComponent.RightW:
+                    return b.w;
+                default:
+                    throw new System.ArgumentException("Invalid shuffle component: " + component);
+            }
+        }
+
+    }
+}

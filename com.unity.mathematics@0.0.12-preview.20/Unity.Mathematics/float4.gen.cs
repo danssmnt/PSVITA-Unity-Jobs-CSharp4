@@ -1,0 +1,3457 @@
+// GENERATED CODE
+using System;
+using System.Runtime.CompilerServices;
+using System.Diagnostics;
+
+#pragma warning disable 0660, 0661
+
+namespace Unity.Mathematics
+{
+    [DebuggerTypeProxy(typeof(float4.DebuggerProxy))]
+    [System.Serializable]
+    public partial struct float4 : System.IEquatable<float4>, IFormattable
+    {
+        public float x;
+        public float y;
+        public float z;
+        public float w;
+
+        /// <summary>float4 zero value.</summary>
+        public static readonly float4 zero;
+
+        /// <summary>Constructs a float4 vector from four float values.</summary>
+        
+        public float4(float x, float y, float z, float w)
+        { 
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a float4 vector from two float values and a float2 vector.</summary>
+        
+        public float4(float x, float y, float2 zw)
+        { 
+            this.x = x;
+            this.y = y;
+            this.z = zw.x;
+            this.w = zw.y;
+        }
+
+        /// <summary>Constructs a float4 vector from a float value, a float2 vector and a float value.</summary>
+        
+        public float4(float x, float2 yz, float w)
+        { 
+            this.x = x;
+            this.y = yz.x;
+            this.z = yz.y;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a float4 vector from a float value and a float3 vector.</summary>
+        
+        public float4(float x, float3 yzw)
+        { 
+            this.x = x;
+            this.y = yzw.x;
+            this.z = yzw.y;
+            this.w = yzw.z;
+        }
+
+        /// <summary>Constructs a float4 vector from a float2 vector and two float values.</summary>
+        
+        public float4(float2 xy, float z, float w)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+            this.z = z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a float4 vector from two float2 vectors.</summary>
+        
+        public float4(float2 xy, float2 zw)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+            this.z = zw.x;
+            this.w = zw.y;
+        }
+
+        /// <summary>Constructs a float4 vector from a float3 vector and a float value.</summary>
+        
+        public float4(float3 xyz, float w)
+        { 
+            this.x = xyz.x;
+            this.y = xyz.y;
+            this.z = xyz.z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a float4 vector from a float4 vector.</summary>
+        
+        public float4(float4 xyzw)
+        { 
+            this.x = xyzw.x;
+            this.y = xyzw.y;
+            this.z = xyzw.z;
+            this.w = xyzw.w;
+        }
+
+        /// <summary>Constructs a float4 vector from a single float value by assigning it to every component.</summary>
+        
+        public float4(float v)
+        {
+            this.x = v;
+            this.y = v;
+            this.z = v;
+            this.w = v;
+        }
+
+        /// <summary>Constructs a float4 vector from a single bool value by converting it to float and assigning it to every component.</summary>
+        
+        public float4(bool v)
+        {
+            this.x = v ? 1.0f : 0.0f;
+            this.y = v ? 1.0f : 0.0f;
+            this.z = v ? 1.0f : 0.0f;
+            this.w = v ? 1.0f : 0.0f;
+        }
+
+        /// <summary>Constructs a float4 vector from a bool4 vector by componentwise conversion.</summary>
+        
+        public float4(bool4 v)
+        {
+            this.x = v.x ? 1.0f : 0.0f;
+            this.y = v.y ? 1.0f : 0.0f;
+            this.z = v.z ? 1.0f : 0.0f;
+            this.w = v.w ? 1.0f : 0.0f;
+        }
+
+        /// <summary>Constructs a float4 vector from a single int value by converting it to float and assigning it to every component.</summary>
+        
+        public float4(int v)
+        {
+            this.x = v;
+            this.y = v;
+            this.z = v;
+            this.w = v;
+        }
+
+        /// <summary>Constructs a float4 vector from a int4 vector by componentwise conversion.</summary>
+        
+        public float4(int4 v)
+        {
+            this.x = v.x;
+            this.y = v.y;
+            this.z = v.z;
+            this.w = v.w;
+        }
+
+        /// <summary>Constructs a float4 vector from a single uint value by converting it to float and assigning it to every component.</summary>
+        
+        public float4(uint v)
+        {
+            this.x = v;
+            this.y = v;
+            this.z = v;
+            this.w = v;
+        }
+
+        /// <summary>Constructs a float4 vector from a uint4 vector by componentwise conversion.</summary>
+        
+        public float4(uint4 v)
+        {
+            this.x = v.x;
+            this.y = v.y;
+            this.z = v.z;
+            this.w = v.w;
+        }
+
+        /// <summary>Constructs a float4 vector from a single half value by converting it to float and assigning it to every component.</summary>
+        
+        public float4(half v)
+        {
+            this.x = v;
+            this.y = v;
+            this.z = v;
+            this.w = v;
+        }
+
+        /// <summary>Constructs a float4 vector from a half4 vector by componentwise conversion.</summary>
+        
+        public float4(half4 v)
+        {
+            this.x = v.x;
+            this.y = v.y;
+            this.z = v.z;
+            this.w = v.w;
+        }
+
+        /// <summary>Constructs a float4 vector from a single double value by converting it to float and assigning it to every component.</summary>
+        
+        public float4(double v)
+        {
+            this.x = (float)v;
+            this.y = (float)v;
+            this.z = (float)v;
+            this.w = (float)v;
+        }
+
+        /// <summary>Constructs a float4 vector from a double4 vector by componentwise conversion.</summary>
+        
+        public float4(double4 v)
+        {
+            this.x = (float)v.x;
+            this.y = (float)v.y;
+            this.z = (float)v.z;
+            this.w = (float)v.w;
+        }
+
+
+        /// <summary>Implicitly converts a single float value to a float4 vector by assigning it to every component.</summary>
+        
+        public static implicit operator float4(float v) { return new float4(v); }
+
+        /// <summary>Explicitly converts a single bool value to a float4 vector by converting it to float and assigning it to every component.</summary>
+        
+        public static explicit operator float4(bool v) { return new float4(v); }
+
+        /// <summary>Explicitly converts a bool4 vector to a float4 vector by componentwise conversion.</summary>
+        
+        public static explicit operator float4(bool4 v) { return new float4(v); }
+
+        /// <summary>Implicitly converts a single int value to a float4 vector by converting it to float and assigning it to every component.</summary>
+        
+        public static implicit operator float4(int v) { return new float4(v); }
+
+        /// <summary>Implicitly converts a int4 vector to a float4 vector by componentwise conversion.</summary>
+        
+        public static implicit operator float4(int4 v) { return new float4(v); }
+
+        /// <summary>Implicitly converts a single uint value to a float4 vector by converting it to float and assigning it to every component.</summary>
+        
+        public static implicit operator float4(uint v) { return new float4(v); }
+
+        /// <summary>Implicitly converts a uint4 vector to a float4 vector by componentwise conversion.</summary>
+        
+        public static implicit operator float4(uint4 v) { return new float4(v); }
+
+        /// <summary>Implicitly converts a single half value to a float4 vector by converting it to float and assigning it to every component.</summary>
+        
+        public static implicit operator float4(half v) { return new float4(v); }
+
+        /// <summary>Implicitly converts a half4 vector to a float4 vector by componentwise conversion.</summary>
+        
+        public static implicit operator float4(half4 v) { return new float4(v); }
+
+        /// <summary>Explicitly converts a single double value to a float4 vector by converting it to float and assigning it to every component.</summary>
+        
+        public static explicit operator float4(double v) { return new float4(v); }
+
+        /// <summary>Explicitly converts a double4 vector to a float4 vector by componentwise conversion.</summary>
+        
+        public static explicit operator float4(double4 v) { return new float4(v); }
+
+
+        /// <summary>Returns the result of a componentwise multiplication operation on two float4 vectors.</summary>
+        
+        public static float4 operator * (float4 lhs, float4 rhs) { return new float4 (lhs.x * rhs.x, lhs.y * rhs.y, lhs.z * rhs.z, lhs.w * rhs.w); }
+
+        /// <summary>Returns the result of a componentwise multiplication operation on a float4 vector and a float value.</summary>
+        
+        public static float4 operator * (float4 lhs, float rhs) { return new float4 (lhs.x * rhs, lhs.y * rhs, lhs.z * rhs, lhs.w * rhs); }
+
+        /// <summary>Returns the result of a componentwise multiplication operation on a float value and a float4 vector.</summary>
+        
+        public static float4 operator * (float lhs, float4 rhs) { return new float4 (lhs * rhs.x, lhs * rhs.y, lhs * rhs.z, lhs * rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise addition operation on two float4 vectors.</summary>
+        
+        public static float4 operator + (float4 lhs, float4 rhs) { return new float4 (lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z, lhs.w + rhs.w); }
+
+        /// <summary>Returns the result of a componentwise addition operation on a float4 vector and a float value.</summary>
+        
+        public static float4 operator + (float4 lhs, float rhs) { return new float4 (lhs.x + rhs, lhs.y + rhs, lhs.z + rhs, lhs.w + rhs); }
+
+        /// <summary>Returns the result of a componentwise addition operation on a float value and a float4 vector.</summary>
+        
+        public static float4 operator + (float lhs, float4 rhs) { return new float4 (lhs + rhs.x, lhs + rhs.y, lhs + rhs.z, lhs + rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise subtraction operation on two float4 vectors.</summary>
+        
+        public static float4 operator - (float4 lhs, float4 rhs) { return new float4 (lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z, lhs.w - rhs.w); }
+
+        /// <summary>Returns the result of a componentwise subtraction operation on a float4 vector and a float value.</summary>
+        
+        public static float4 operator - (float4 lhs, float rhs) { return new float4 (lhs.x - rhs, lhs.y - rhs, lhs.z - rhs, lhs.w - rhs); }
+
+        /// <summary>Returns the result of a componentwise subtraction operation on a float value and a float4 vector.</summary>
+        
+        public static float4 operator - (float lhs, float4 rhs) { return new float4 (lhs - rhs.x, lhs - rhs.y, lhs - rhs.z, lhs - rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise division operation on two float4 vectors.</summary>
+        
+        public static float4 operator / (float4 lhs, float4 rhs) { return new float4 (lhs.x / rhs.x, lhs.y / rhs.y, lhs.z / rhs.z, lhs.w / rhs.w); }
+
+        /// <summary>Returns the result of a componentwise division operation on a float4 vector and a float value.</summary>
+        
+        public static float4 operator / (float4 lhs, float rhs) { return new float4 (lhs.x / rhs, lhs.y / rhs, lhs.z / rhs, lhs.w / rhs); }
+
+        /// <summary>Returns the result of a componentwise division operation on a float value and a float4 vector.</summary>
+        
+        public static float4 operator / (float lhs, float4 rhs) { return new float4 (lhs / rhs.x, lhs / rhs.y, lhs / rhs.z, lhs / rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise modulus operation on two float4 vectors.</summary>
+        
+        public static float4 operator % (float4 lhs, float4 rhs) { return new float4 (lhs.x % rhs.x, lhs.y % rhs.y, lhs.z % rhs.z, lhs.w % rhs.w); }
+
+        /// <summary>Returns the result of a componentwise modulus operation on a float4 vector and a float value.</summary>
+        
+        public static float4 operator % (float4 lhs, float rhs) { return new float4 (lhs.x % rhs, lhs.y % rhs, lhs.z % rhs, lhs.w % rhs); }
+
+        /// <summary>Returns the result of a componentwise modulus operation on a float value and a float4 vector.</summary>
+        
+        public static float4 operator % (float lhs, float4 rhs) { return new float4 (lhs % rhs.x, lhs % rhs.y, lhs % rhs.z, lhs % rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise increment operation on a float4 vector.</summary>
+        
+        public static float4 operator ++ (float4 val) { return new float4 (++val.x, ++val.y, ++val.z, ++val.w); }
+
+
+        /// <summary>Returns the result of a componentwise decrement operation on a float4 vector.</summary>
+        
+        public static float4 operator -- (float4 val) { return new float4 (--val.x, --val.y, --val.z, --val.w); }
+
+
+        /// <summary>Returns the result of a componentwise less than operation on two float4 vectors.</summary>
+        
+        public static bool4 operator < (float4 lhs, float4 rhs) { return new bool4 (lhs.x < rhs.x, lhs.y < rhs.y, lhs.z < rhs.z, lhs.w < rhs.w); }
+
+        /// <summary>Returns the result of a componentwise less than operation on a float4 vector and a float value.</summary>
+        
+        public static bool4 operator < (float4 lhs, float rhs) { return new bool4 (lhs.x < rhs, lhs.y < rhs, lhs.z < rhs, lhs.w < rhs); }
+
+        /// <summary>Returns the result of a componentwise less than operation on a float value and a float4 vector.</summary>
+        
+        public static bool4 operator < (float lhs, float4 rhs) { return new bool4 (lhs < rhs.x, lhs < rhs.y, lhs < rhs.z, lhs < rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise less or equal operation on two float4 vectors.</summary>
+        
+        public static bool4 operator <= (float4 lhs, float4 rhs) { return new bool4 (lhs.x <= rhs.x, lhs.y <= rhs.y, lhs.z <= rhs.z, lhs.w <= rhs.w); }
+
+        /// <summary>Returns the result of a componentwise less or equal operation on a float4 vector and a float value.</summary>
+        
+        public static bool4 operator <= (float4 lhs, float rhs) { return new bool4 (lhs.x <= rhs, lhs.y <= rhs, lhs.z <= rhs, lhs.w <= rhs); }
+
+        /// <summary>Returns the result of a componentwise less or equal operation on a float value and a float4 vector.</summary>
+        
+        public static bool4 operator <= (float lhs, float4 rhs) { return new bool4 (lhs <= rhs.x, lhs <= rhs.y, lhs <= rhs.z, lhs <= rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise greater than operation on two float4 vectors.</summary>
+        
+        public static bool4 operator > (float4 lhs, float4 rhs) { return new bool4 (lhs.x > rhs.x, lhs.y > rhs.y, lhs.z > rhs.z, lhs.w > rhs.w); }
+
+        /// <summary>Returns the result of a componentwise greater than operation on a float4 vector and a float value.</summary>
+        
+        public static bool4 operator > (float4 lhs, float rhs) { return new bool4 (lhs.x > rhs, lhs.y > rhs, lhs.z > rhs, lhs.w > rhs); }
+
+        /// <summary>Returns the result of a componentwise greater than operation on a float value and a float4 vector.</summary>
+        
+        public static bool4 operator > (float lhs, float4 rhs) { return new bool4 (lhs > rhs.x, lhs > rhs.y, lhs > rhs.z, lhs > rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise greater or equal operation on two float4 vectors.</summary>
+        
+        public static bool4 operator >= (float4 lhs, float4 rhs) { return new bool4 (lhs.x >= rhs.x, lhs.y >= rhs.y, lhs.z >= rhs.z, lhs.w >= rhs.w); }
+
+        /// <summary>Returns the result of a componentwise greater or equal operation on a float4 vector and a float value.</summary>
+        
+        public static bool4 operator >= (float4 lhs, float rhs) { return new bool4 (lhs.x >= rhs, lhs.y >= rhs, lhs.z >= rhs, lhs.w >= rhs); }
+
+        /// <summary>Returns the result of a componentwise greater or equal operation on a float value and a float4 vector.</summary>
+        
+        public static bool4 operator >= (float lhs, float4 rhs) { return new bool4 (lhs >= rhs.x, lhs >= rhs.y, lhs >= rhs.z, lhs >= rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise unary minus operation on a float4 vector.</summary>
+        
+        public static float4 operator - (float4 val) { return new float4 (-val.x, -val.y, -val.z, -val.w); }
+
+
+        /// <summary>Returns the result of a componentwise unary plus operation on a float4 vector.</summary>
+        
+        public static float4 operator + (float4 val) { return new float4 (+val.x, +val.y, +val.z, +val.w); }
+
+
+        /// <summary>Returns the result of a componentwise equality operation on two float4 vectors.</summary>
+        
+        public static bool4 operator == (float4 lhs, float4 rhs) { return new bool4 (lhs.x == rhs.x, lhs.y == rhs.y, lhs.z == rhs.z, lhs.w == rhs.w); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a float4 vector and a float value.</summary>
+        
+        public static bool4 operator == (float4 lhs, float rhs) { return new bool4 (lhs.x == rhs, lhs.y == rhs, lhs.z == rhs, lhs.w == rhs); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a float value and a float4 vector.</summary>
+        
+        public static bool4 operator == (float lhs, float4 rhs) { return new bool4 (lhs == rhs.x, lhs == rhs.y, lhs == rhs.z, lhs == rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise not equal operation on two float4 vectors.</summary>
+        
+        public static bool4 operator != (float4 lhs, float4 rhs) { return new bool4 (lhs.x != rhs.x, lhs.y != rhs.y, lhs.z != rhs.z, lhs.w != rhs.w); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a float4 vector and a float value.</summary>
+        
+        public static bool4 operator != (float4 lhs, float rhs) { return new bool4 (lhs.x != rhs, lhs.y != rhs, lhs.z != rhs, lhs.w != rhs); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a float value and a float4 vector.</summary>
+        
+        public static bool4 operator != (float lhs, float4 rhs) { return new bool4 (lhs != rhs.x, lhs != rhs.y, lhs != rhs.z, lhs != rhs.w); }
+
+
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxxx
+        {
+            
+            get { return new float4(x, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxxy
+        {
+            
+            get { return new float4(x, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxxz
+        {
+            
+            get { return new float4(x, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxxw
+        {
+            
+            get { return new float4(x, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxyx
+        {
+            
+            get { return new float4(x, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxyy
+        {
+            
+            get { return new float4(x, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxyz
+        {
+            
+            get { return new float4(x, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxyw
+        {
+            
+            get { return new float4(x, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxzx
+        {
+            
+            get { return new float4(x, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxzy
+        {
+            
+            get { return new float4(x, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxzz
+        {
+            
+            get { return new float4(x, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxzw
+        {
+            
+            get { return new float4(x, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxwx
+        {
+            
+            get { return new float4(x, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxwy
+        {
+            
+            get { return new float4(x, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxwz
+        {
+            
+            get { return new float4(x, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xxww
+        {
+            
+            get { return new float4(x, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyxx
+        {
+            
+            get { return new float4(x, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyxy
+        {
+            
+            get { return new float4(x, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyxz
+        {
+            
+            get { return new float4(x, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyxw
+        {
+            
+            get { return new float4(x, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyyx
+        {
+            
+            get { return new float4(x, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyyy
+        {
+            
+            get { return new float4(x, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyyz
+        {
+            
+            get { return new float4(x, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyyw
+        {
+            
+            get { return new float4(x, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyzx
+        {
+            
+            get { return new float4(x, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyzy
+        {
+            
+            get { return new float4(x, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyzz
+        {
+            
+            get { return new float4(x, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyzw
+        {
+            
+            get { return new float4(x, y, z, w); }
+            
+            set { x = value.x; y = value.y; z = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xywx
+        {
+            
+            get { return new float4(x, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xywy
+        {
+            
+            get { return new float4(x, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xywz
+        {
+            
+            get { return new float4(x, y, w, z); }
+            
+            set { x = value.x; y = value.y; w = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xyww
+        {
+            
+            get { return new float4(x, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzxx
+        {
+            
+            get { return new float4(x, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzxy
+        {
+            
+            get { return new float4(x, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzxz
+        {
+            
+            get { return new float4(x, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzxw
+        {
+            
+            get { return new float4(x, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzyx
+        {
+            
+            get { return new float4(x, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzyy
+        {
+            
+            get { return new float4(x, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzyz
+        {
+            
+            get { return new float4(x, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzyw
+        {
+            
+            get { return new float4(x, z, y, w); }
+            
+            set { x = value.x; z = value.y; y = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzzx
+        {
+            
+            get { return new float4(x, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzzy
+        {
+            
+            get { return new float4(x, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzzz
+        {
+            
+            get { return new float4(x, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzzw
+        {
+            
+            get { return new float4(x, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzwx
+        {
+            
+            get { return new float4(x, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzwy
+        {
+            
+            get { return new float4(x, z, w, y); }
+            
+            set { x = value.x; z = value.y; w = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzwz
+        {
+            
+            get { return new float4(x, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xzww
+        {
+            
+            get { return new float4(x, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwxx
+        {
+            
+            get { return new float4(x, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwxy
+        {
+            
+            get { return new float4(x, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwxz
+        {
+            
+            get { return new float4(x, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwxw
+        {
+            
+            get { return new float4(x, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwyx
+        {
+            
+            get { return new float4(x, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwyy
+        {
+            
+            get { return new float4(x, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwyz
+        {
+            
+            get { return new float4(x, w, y, z); }
+            
+            set { x = value.x; w = value.y; y = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwyw
+        {
+            
+            get { return new float4(x, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwzx
+        {
+            
+            get { return new float4(x, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwzy
+        {
+            
+            get { return new float4(x, w, z, y); }
+            
+            set { x = value.x; w = value.y; z = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwzz
+        {
+            
+            get { return new float4(x, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwzw
+        {
+            
+            get { return new float4(x, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwwx
+        {
+            
+            get { return new float4(x, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwwy
+        {
+            
+            get { return new float4(x, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwwz
+        {
+            
+            get { return new float4(x, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 xwww
+        {
+            
+            get { return new float4(x, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxxx
+        {
+            
+            get { return new float4(y, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxxy
+        {
+            
+            get { return new float4(y, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxxz
+        {
+            
+            get { return new float4(y, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxxw
+        {
+            
+            get { return new float4(y, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxyx
+        {
+            
+            get { return new float4(y, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxyy
+        {
+            
+            get { return new float4(y, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxyz
+        {
+            
+            get { return new float4(y, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxyw
+        {
+            
+            get { return new float4(y, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxzx
+        {
+            
+            get { return new float4(y, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxzy
+        {
+            
+            get { return new float4(y, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxzz
+        {
+            
+            get { return new float4(y, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxzw
+        {
+            
+            get { return new float4(y, x, z, w); }
+            
+            set { y = value.x; x = value.y; z = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxwx
+        {
+            
+            get { return new float4(y, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxwy
+        {
+            
+            get { return new float4(y, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxwz
+        {
+            
+            get { return new float4(y, x, w, z); }
+            
+            set { y = value.x; x = value.y; w = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yxww
+        {
+            
+            get { return new float4(y, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyxx
+        {
+            
+            get { return new float4(y, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyxy
+        {
+            
+            get { return new float4(y, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyxz
+        {
+            
+            get { return new float4(y, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyxw
+        {
+            
+            get { return new float4(y, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyyx
+        {
+            
+            get { return new float4(y, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyyy
+        {
+            
+            get { return new float4(y, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyyz
+        {
+            
+            get { return new float4(y, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyyw
+        {
+            
+            get { return new float4(y, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyzx
+        {
+            
+            get { return new float4(y, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyzy
+        {
+            
+            get { return new float4(y, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyzz
+        {
+            
+            get { return new float4(y, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyzw
+        {
+            
+            get { return new float4(y, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yywx
+        {
+            
+            get { return new float4(y, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yywy
+        {
+            
+            get { return new float4(y, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yywz
+        {
+            
+            get { return new float4(y, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yyww
+        {
+            
+            get { return new float4(y, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzxx
+        {
+            
+            get { return new float4(y, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzxy
+        {
+            
+            get { return new float4(y, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzxz
+        {
+            
+            get { return new float4(y, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzxw
+        {
+            
+            get { return new float4(y, z, x, w); }
+            
+            set { y = value.x; z = value.y; x = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzyx
+        {
+            
+            get { return new float4(y, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzyy
+        {
+            
+            get { return new float4(y, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzyz
+        {
+            
+            get { return new float4(y, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzyw
+        {
+            
+            get { return new float4(y, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzzx
+        {
+            
+            get { return new float4(y, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzzy
+        {
+            
+            get { return new float4(y, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzzz
+        {
+            
+            get { return new float4(y, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzzw
+        {
+            
+            get { return new float4(y, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzwx
+        {
+            
+            get { return new float4(y, z, w, x); }
+            
+            set { y = value.x; z = value.y; w = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzwy
+        {
+            
+            get { return new float4(y, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzwz
+        {
+            
+            get { return new float4(y, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 yzww
+        {
+            
+            get { return new float4(y, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywxx
+        {
+            
+            get { return new float4(y, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywxy
+        {
+            
+            get { return new float4(y, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywxz
+        {
+            
+            get { return new float4(y, w, x, z); }
+            
+            set { y = value.x; w = value.y; x = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywxw
+        {
+            
+            get { return new float4(y, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywyx
+        {
+            
+            get { return new float4(y, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywyy
+        {
+            
+            get { return new float4(y, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywyz
+        {
+            
+            get { return new float4(y, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywyw
+        {
+            
+            get { return new float4(y, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywzx
+        {
+            
+            get { return new float4(y, w, z, x); }
+            
+            set { y = value.x; w = value.y; z = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywzy
+        {
+            
+            get { return new float4(y, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywzz
+        {
+            
+            get { return new float4(y, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywzw
+        {
+            
+            get { return new float4(y, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywwx
+        {
+            
+            get { return new float4(y, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywwy
+        {
+            
+            get { return new float4(y, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywwz
+        {
+            
+            get { return new float4(y, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 ywww
+        {
+            
+            get { return new float4(y, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxxx
+        {
+            
+            get { return new float4(z, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxxy
+        {
+            
+            get { return new float4(z, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxxz
+        {
+            
+            get { return new float4(z, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxxw
+        {
+            
+            get { return new float4(z, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxyx
+        {
+            
+            get { return new float4(z, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxyy
+        {
+            
+            get { return new float4(z, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxyz
+        {
+            
+            get { return new float4(z, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxyw
+        {
+            
+            get { return new float4(z, x, y, w); }
+            
+            set { z = value.x; x = value.y; y = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxzx
+        {
+            
+            get { return new float4(z, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxzy
+        {
+            
+            get { return new float4(z, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxzz
+        {
+            
+            get { return new float4(z, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxzw
+        {
+            
+            get { return new float4(z, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxwx
+        {
+            
+            get { return new float4(z, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxwy
+        {
+            
+            get { return new float4(z, x, w, y); }
+            
+            set { z = value.x; x = value.y; w = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxwz
+        {
+            
+            get { return new float4(z, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zxww
+        {
+            
+            get { return new float4(z, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyxx
+        {
+            
+            get { return new float4(z, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyxy
+        {
+            
+            get { return new float4(z, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyxz
+        {
+            
+            get { return new float4(z, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyxw
+        {
+            
+            get { return new float4(z, y, x, w); }
+            
+            set { z = value.x; y = value.y; x = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyyx
+        {
+            
+            get { return new float4(z, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyyy
+        {
+            
+            get { return new float4(z, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyyz
+        {
+            
+            get { return new float4(z, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyyw
+        {
+            
+            get { return new float4(z, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyzx
+        {
+            
+            get { return new float4(z, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyzy
+        {
+            
+            get { return new float4(z, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyzz
+        {
+            
+            get { return new float4(z, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyzw
+        {
+            
+            get { return new float4(z, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zywx
+        {
+            
+            get { return new float4(z, y, w, x); }
+            
+            set { z = value.x; y = value.y; w = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zywy
+        {
+            
+            get { return new float4(z, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zywz
+        {
+            
+            get { return new float4(z, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zyww
+        {
+            
+            get { return new float4(z, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzxx
+        {
+            
+            get { return new float4(z, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzxy
+        {
+            
+            get { return new float4(z, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzxz
+        {
+            
+            get { return new float4(z, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzxw
+        {
+            
+            get { return new float4(z, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzyx
+        {
+            
+            get { return new float4(z, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzyy
+        {
+            
+            get { return new float4(z, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzyz
+        {
+            
+            get { return new float4(z, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzyw
+        {
+            
+            get { return new float4(z, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzzx
+        {
+            
+            get { return new float4(z, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzzy
+        {
+            
+            get { return new float4(z, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzzz
+        {
+            
+            get { return new float4(z, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzzw
+        {
+            
+            get { return new float4(z, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzwx
+        {
+            
+            get { return new float4(z, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzwy
+        {
+            
+            get { return new float4(z, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzwz
+        {
+            
+            get { return new float4(z, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zzww
+        {
+            
+            get { return new float4(z, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwxx
+        {
+            
+            get { return new float4(z, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwxy
+        {
+            
+            get { return new float4(z, w, x, y); }
+            
+            set { z = value.x; w = value.y; x = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwxz
+        {
+            
+            get { return new float4(z, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwxw
+        {
+            
+            get { return new float4(z, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwyx
+        {
+            
+            get { return new float4(z, w, y, x); }
+            
+            set { z = value.x; w = value.y; y = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwyy
+        {
+            
+            get { return new float4(z, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwyz
+        {
+            
+            get { return new float4(z, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwyw
+        {
+            
+            get { return new float4(z, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwzx
+        {
+            
+            get { return new float4(z, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwzy
+        {
+            
+            get { return new float4(z, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwzz
+        {
+            
+            get { return new float4(z, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwzw
+        {
+            
+            get { return new float4(z, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwwx
+        {
+            
+            get { return new float4(z, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwwy
+        {
+            
+            get { return new float4(z, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwwz
+        {
+            
+            get { return new float4(z, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 zwww
+        {
+            
+            get { return new float4(z, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxxx
+        {
+            
+            get { return new float4(w, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxxy
+        {
+            
+            get { return new float4(w, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxxz
+        {
+            
+            get { return new float4(w, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxxw
+        {
+            
+            get { return new float4(w, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxyx
+        {
+            
+            get { return new float4(w, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxyy
+        {
+            
+            get { return new float4(w, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxyz
+        {
+            
+            get { return new float4(w, x, y, z); }
+            
+            set { w = value.x; x = value.y; y = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxyw
+        {
+            
+            get { return new float4(w, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxzx
+        {
+            
+            get { return new float4(w, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxzy
+        {
+            
+            get { return new float4(w, x, z, y); }
+            
+            set { w = value.x; x = value.y; z = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxzz
+        {
+            
+            get { return new float4(w, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxzw
+        {
+            
+            get { return new float4(w, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxwx
+        {
+            
+            get { return new float4(w, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxwy
+        {
+            
+            get { return new float4(w, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxwz
+        {
+            
+            get { return new float4(w, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wxww
+        {
+            
+            get { return new float4(w, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyxx
+        {
+            
+            get { return new float4(w, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyxy
+        {
+            
+            get { return new float4(w, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyxz
+        {
+            
+            get { return new float4(w, y, x, z); }
+            
+            set { w = value.x; y = value.y; x = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyxw
+        {
+            
+            get { return new float4(w, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyyx
+        {
+            
+            get { return new float4(w, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyyy
+        {
+            
+            get { return new float4(w, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyyz
+        {
+            
+            get { return new float4(w, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyyw
+        {
+            
+            get { return new float4(w, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyzx
+        {
+            
+            get { return new float4(w, y, z, x); }
+            
+            set { w = value.x; y = value.y; z = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyzy
+        {
+            
+            get { return new float4(w, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyzz
+        {
+            
+            get { return new float4(w, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyzw
+        {
+            
+            get { return new float4(w, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wywx
+        {
+            
+            get { return new float4(w, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wywy
+        {
+            
+            get { return new float4(w, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wywz
+        {
+            
+            get { return new float4(w, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wyww
+        {
+            
+            get { return new float4(w, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzxx
+        {
+            
+            get { return new float4(w, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzxy
+        {
+            
+            get { return new float4(w, z, x, y); }
+            
+            set { w = value.x; z = value.y; x = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzxz
+        {
+            
+            get { return new float4(w, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzxw
+        {
+            
+            get { return new float4(w, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzyx
+        {
+            
+            get { return new float4(w, z, y, x); }
+            
+            set { w = value.x; z = value.y; y = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzyy
+        {
+            
+            get { return new float4(w, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzyz
+        {
+            
+            get { return new float4(w, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzyw
+        {
+            
+            get { return new float4(w, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzzx
+        {
+            
+            get { return new float4(w, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzzy
+        {
+            
+            get { return new float4(w, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzzz
+        {
+            
+            get { return new float4(w, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzzw
+        {
+            
+            get { return new float4(w, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzwx
+        {
+            
+            get { return new float4(w, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzwy
+        {
+            
+            get { return new float4(w, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzwz
+        {
+            
+            get { return new float4(w, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wzww
+        {
+            
+            get { return new float4(w, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwxx
+        {
+            
+            get { return new float4(w, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwxy
+        {
+            
+            get { return new float4(w, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwxz
+        {
+            
+            get { return new float4(w, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwxw
+        {
+            
+            get { return new float4(w, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwyx
+        {
+            
+            get { return new float4(w, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwyy
+        {
+            
+            get { return new float4(w, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwyz
+        {
+            
+            get { return new float4(w, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwyw
+        {
+            
+            get { return new float4(w, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwzx
+        {
+            
+            get { return new float4(w, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwzy
+        {
+            
+            get { return new float4(w, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwzz
+        {
+            
+            get { return new float4(w, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwzw
+        {
+            
+            get { return new float4(w, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwwx
+        {
+            
+            get { return new float4(w, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwwy
+        {
+            
+            get { return new float4(w, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwwz
+        {
+            
+            get { return new float4(w, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float4 wwww
+        {
+            
+            get { return new float4(w, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xxx
+        {
+            
+            get { return new float3(x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xxy
+        {
+            
+            get { return new float3(x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xxz
+        {
+            
+            get { return new float3(x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xxw
+        {
+            
+            get { return new float3(x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xyx
+        {
+            
+            get { return new float3(x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xyy
+        {
+            
+            get { return new float3(x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xyz
+        {
+            
+            get { return new float3(x, y, z); }
+            
+            set { x = value.x; y = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xyw
+        {
+            
+            get { return new float3(x, y, w); }
+            
+            set { x = value.x; y = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xzx
+        {
+            
+            get { return new float3(x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xzy
+        {
+            
+            get { return new float3(x, z, y); }
+            
+            set { x = value.x; z = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xzz
+        {
+            
+            get { return new float3(x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xzw
+        {
+            
+            get { return new float3(x, z, w); }
+            
+            set { x = value.x; z = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xwx
+        {
+            
+            get { return new float3(x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xwy
+        {
+            
+            get { return new float3(x, w, y); }
+            
+            set { x = value.x; w = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xwz
+        {
+            
+            get { return new float3(x, w, z); }
+            
+            set { x = value.x; w = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 xww
+        {
+            
+            get { return new float3(x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yxx
+        {
+            
+            get { return new float3(y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yxy
+        {
+            
+            get { return new float3(y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yxz
+        {
+            
+            get { return new float3(y, x, z); }
+            
+            set { y = value.x; x = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yxw
+        {
+            
+            get { return new float3(y, x, w); }
+            
+            set { y = value.x; x = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yyx
+        {
+            
+            get { return new float3(y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yyy
+        {
+            
+            get { return new float3(y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yyz
+        {
+            
+            get { return new float3(y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yyw
+        {
+            
+            get { return new float3(y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yzx
+        {
+            
+            get { return new float3(y, z, x); }
+            
+            set { y = value.x; z = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yzy
+        {
+            
+            get { return new float3(y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yzz
+        {
+            
+            get { return new float3(y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yzw
+        {
+            
+            get { return new float3(y, z, w); }
+            
+            set { y = value.x; z = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 ywx
+        {
+            
+            get { return new float3(y, w, x); }
+            
+            set { y = value.x; w = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 ywy
+        {
+            
+            get { return new float3(y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 ywz
+        {
+            
+            get { return new float3(y, w, z); }
+            
+            set { y = value.x; w = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 yww
+        {
+            
+            get { return new float3(y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zxx
+        {
+            
+            get { return new float3(z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zxy
+        {
+            
+            get { return new float3(z, x, y); }
+            
+            set { z = value.x; x = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zxz
+        {
+            
+            get { return new float3(z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zxw
+        {
+            
+            get { return new float3(z, x, w); }
+            
+            set { z = value.x; x = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zyx
+        {
+            
+            get { return new float3(z, y, x); }
+            
+            set { z = value.x; y = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zyy
+        {
+            
+            get { return new float3(z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zyz
+        {
+            
+            get { return new float3(z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zyw
+        {
+            
+            get { return new float3(z, y, w); }
+            
+            set { z = value.x; y = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zzx
+        {
+            
+            get { return new float3(z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zzy
+        {
+            
+            get { return new float3(z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zzz
+        {
+            
+            get { return new float3(z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zzw
+        {
+            
+            get { return new float3(z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zwx
+        {
+            
+            get { return new float3(z, w, x); }
+            
+            set { z = value.x; w = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zwy
+        {
+            
+            get { return new float3(z, w, y); }
+            
+            set { z = value.x; w = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zwz
+        {
+            
+            get { return new float3(z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 zww
+        {
+            
+            get { return new float3(z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wxx
+        {
+            
+            get { return new float3(w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wxy
+        {
+            
+            get { return new float3(w, x, y); }
+            
+            set { w = value.x; x = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wxz
+        {
+            
+            get { return new float3(w, x, z); }
+            
+            set { w = value.x; x = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wxw
+        {
+            
+            get { return new float3(w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wyx
+        {
+            
+            get { return new float3(w, y, x); }
+            
+            set { w = value.x; y = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wyy
+        {
+            
+            get { return new float3(w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wyz
+        {
+            
+            get { return new float3(w, y, z); }
+            
+            set { w = value.x; y = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wyw
+        {
+            
+            get { return new float3(w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wzx
+        {
+            
+            get { return new float3(w, z, x); }
+            
+            set { w = value.x; z = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wzy
+        {
+            
+            get { return new float3(w, z, y); }
+            
+            set { w = value.x; z = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wzz
+        {
+            
+            get { return new float3(w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wzw
+        {
+            
+            get { return new float3(w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wwx
+        {
+            
+            get { return new float3(w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wwy
+        {
+            
+            get { return new float3(w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 wwz
+        {
+            
+            get { return new float3(w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float3 www
+        {
+            
+            get { return new float3(w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 xx
+        {
+            
+            get { return new float2(x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 xy
+        {
+            
+            get { return new float2(x, y); }
+            
+            set { x = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 xz
+        {
+            
+            get { return new float2(x, z); }
+            
+            set { x = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 xw
+        {
+            
+            get { return new float2(x, w); }
+            
+            set { x = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 yx
+        {
+            
+            get { return new float2(y, x); }
+            
+            set { y = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 yy
+        {
+            
+            get { return new float2(y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 yz
+        {
+            
+            get { return new float2(y, z); }
+            
+            set { y = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 yw
+        {
+            
+            get { return new float2(y, w); }
+            
+            set { y = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 zx
+        {
+            
+            get { return new float2(z, x); }
+            
+            set { z = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 zy
+        {
+            
+            get { return new float2(z, y); }
+            
+            set { z = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 zz
+        {
+            
+            get { return new float2(z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 zw
+        {
+            
+            get { return new float2(z, w); }
+            
+            set { z = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 wx
+        {
+            
+            get { return new float2(w, x); }
+            
+            set { w = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 wy
+        {
+            
+            get { return new float2(w, y); }
+            
+            set { w = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 wz
+        {
+            
+            get { return new float2(w, z); }
+            
+            set { w = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public float2 ww
+        {
+            
+            get { return new float2(w, w); }
+        }
+
+
+
+        /// <summary>Returns the float element at a specified index.</summary>
+        unsafe public float this[int index]
+        {
+            get
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 4)
+                    throw new System.ArgumentException("index must be between[0...3]");
+#endif
+                fixed (float4* array = &this) { return ((float*)array)[index]; }
+            }
+            set
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 4)
+                    throw new System.ArgumentException("index must be between[0...3]");
+#endif
+                fixed (float* array = &x) { array[index] = value; }
+            }
+        }
+
+        /// <summary>Returns true if the float4 is equal to a given float4, false otherwise.</summary>
+        
+        public bool Equals(float4 rhs) { return x == rhs.x && y == rhs.y && z == rhs.z && w == rhs.w; }
+
+        /// <summary>Returns true if the float4 is equal to a given float4, false otherwise.</summary>
+        public override bool Equals(object o) { return Equals((float4)o); }
+
+
+        /// <summary>Returns a hash code for the float4.</summary>
+        
+        public override int GetHashCode() { return (int)math.hash(this); }
+
+
+        /// <summary>Returns a string representation of the float4.</summary>
+        
+        public override string ToString()
+        {
+            return string.Format("float4({0}f, {1}f, {2}f, {3}f)", x, y, z, w);
+        }
+
+        /// <summary>Returns a string representation of the float4 using a specified format and culture-specific format information.</summary>
+        
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            return string.Format("float4({0}f, {1}f, {2}f, {3}f)", x.ToString(format, formatProvider), y.ToString(format, formatProvider), z.ToString(format, formatProvider), w.ToString(format, formatProvider));
+        }
+
+        internal sealed class DebuggerProxy
+        {
+            public float x;
+            public float y;
+            public float z;
+            public float w;
+            public DebuggerProxy(float4 v)
+            {
+                x = v.x;
+                y = v.y;
+                z = v.z;
+                w = v.w;
+            }
+        }
+
+    }
+
+    public static partial class math
+    {
+        /// <summary>Returns a float4 vector constructed from four float values.</summary>
+        
+        public static float4 float4(float x, float y, float z, float w) { return new float4(x, y, z, w); }
+
+        /// <summary>Returns a float4 vector constructed from two float values and a float2 vector.</summary>
+        
+        public static float4 float4(float x, float y, float2 zw) { return new float4(x, y, zw); }
+
+        /// <summary>Returns a float4 vector constructed from a float value, a float2 vector and a float value.</summary>
+        
+        public static float4 float4(float x, float2 yz, float w) { return new float4(x, yz, w); }
+
+        /// <summary>Returns a float4 vector constructed from a float value and a float3 vector.</summary>
+        
+        public static float4 float4(float x, float3 yzw) { return new float4(x, yzw); }
+
+        /// <summary>Returns a float4 vector constructed from a float2 vector and two float values.</summary>
+        
+        public static float4 float4(float2 xy, float z, float w) { return new float4(xy, z, w); }
+
+        /// <summary>Returns a float4 vector constructed from two float2 vectors.</summary>
+        
+        public static float4 float4(float2 xy, float2 zw) { return new float4(xy, zw); }
+
+        /// <summary>Returns a float4 vector constructed from a float3 vector and a float value.</summary>
+        
+        public static float4 float4(float3 xyz, float w) { return new float4(xyz, w); }
+
+        /// <summary>Returns a float4 vector constructed from a float4 vector.</summary>
+        
+        public static float4 float4(float4 xyzw) { return new float4(xyzw); }
+
+        /// <summary>Returns a float4 vector constructed from a single float value by assigning it to every component.</summary>
+        
+        public static float4 float4(float v) { return new float4(v); }
+
+        /// <summary>Returns a float4 vector constructed from a single bool value by converting it to float and assigning it to every component.</summary>
+        
+        public static float4 float4(bool v) { return new float4(v); }
+
+        /// <summary>Return a float4 vector constructed from a bool4 vector by componentwise conversion.</summary>
+        
+        public static float4 float4(bool4 v) { return new float4(v); }
+
+        /// <summary>Returns a float4 vector constructed from a single int value by converting it to float and assigning it to every component.</summary>
+        
+        public static float4 float4(int v) { return new float4(v); }
+
+        /// <summary>Return a float4 vector constructed from a int4 vector by componentwise conversion.</summary>
+        
+        public static float4 float4(int4 v) { return new float4(v); }
+
+        /// <summary>Returns a float4 vector constructed from a single uint value by converting it to float and assigning it to every component.</summary>
+        
+        public static float4 float4(uint v) { return new float4(v); }
+
+        /// <summary>Return a float4 vector constructed from a uint4 vector by componentwise conversion.</summary>
+        
+        public static float4 float4(uint4 v) { return new float4(v); }
+
+        /// <summary>Returns a float4 vector constructed from a single half value by converting it to float and assigning it to every component.</summary>
+        
+        public static float4 float4(half v) { return new float4(v); }
+
+        /// <summary>Return a float4 vector constructed from a half4 vector by componentwise conversion.</summary>
+        
+        public static float4 float4(half4 v) { return new float4(v); }
+
+        /// <summary>Returns a float4 vector constructed from a single double value by converting it to float and assigning it to every component.</summary>
+        
+        public static float4 float4(double v) { return new float4(v); }
+
+        /// <summary>Return a float4 vector constructed from a double4 vector by componentwise conversion.</summary>
+        
+        public static float4 float4(double4 v) { return new float4(v); }
+
+        /// <summary>Returns a uint hash code of a float4 vector.</summary>
+        
+        public static uint hash(float4 v)
+        {
+            return csum(asuint(v) * uint4(0xE69626FFu, 0xBD010EEBu, 0x9CEDE1D1u, 0x43BE0B51u)) + 0xAF836EE1u;
+        }
+
+        /// <summary>
+        /// Returns a uint4 vector hash code of a float4 vector.
+        /// When multiple elements are to be hashes together, it can more efficient to calculate and combine wide hash
+        /// that are only reduced to a narrow uint hash at the very end instead of at every step.
+        /// </summary>
+        
+        public static uint4 hashwide(float4 v)
+        {
+            return (asuint(v) * uint4(0xB130C137u, 0x54834775u, 0x7C022221u, 0xA2D00EDFu)) + 0xA8977779u;
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two float4 vectors into a float value.</summary>
+        
+        public static float shuffle(float4 a, float4 b, ShuffleComponent x)
+        {
+            return select_shuffle_component(a, b, x);
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two float4 vectors into a float2 vector.</summary>
+        
+        public static float2 shuffle(float4 a, float4 b, ShuffleComponent x, ShuffleComponent y)
+        {
+            return float2(
+                select_shuffle_component(a, b, x),
+                select_shuffle_component(a, b, y));
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two float4 vectors into a float3 vector.</summary>
+        
+        public static float3 shuffle(float4 a, float4 b, ShuffleComponent x, ShuffleComponent y, ShuffleComponent z)
+        {
+            return float3(
+                select_shuffle_component(a, b, x),
+                select_shuffle_component(a, b, y),
+                select_shuffle_component(a, b, z));
+        }
+
+        /// <summary>Returns the result of specified shuffling of the components from two float4 vectors into a float4 vector.</summary>
+        
+        public static float4 shuffle(float4 a, float4 b, ShuffleComponent x, ShuffleComponent y, ShuffleComponent z, ShuffleComponent w)
+        {
+            return float4(
+                select_shuffle_component(a, b, x),
+                select_shuffle_component(a, b, y),
+                select_shuffle_component(a, b, z),
+                select_shuffle_component(a, b, w));
+        }
+
+        
+        internal static float select_shuffle_component(float4 a, float4 b, ShuffleComponent component)
+        {
+            switch(component)
+            {
+                case ShuffleComponent.LeftX:
+                    return a.x;
+                case ShuffleComponent.LeftY:
+                    return a.y;
+                case ShuffleComponent.LeftZ:
+                    return a.z;
+                case ShuffleComponent.LeftW:
+                    return a.w;
+                case ShuffleComponent.RightX:
+                    return b.x;
+                case ShuffleComponent.RightY:
+                    return b.y;
+                case ShuffleComponent.RightZ:
+                    return b.z;
+                case ShuffleComponent.RightW:
+                    return b.w;
+                default:
+                    throw new System.ArgumentException("Invalid shuffle component: " + component);
+            }
+        }
+
+    }
+}

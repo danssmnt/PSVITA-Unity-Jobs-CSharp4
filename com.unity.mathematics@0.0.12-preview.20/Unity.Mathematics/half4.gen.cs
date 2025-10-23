@@ -1,0 +1,3148 @@
+// GENERATED CODE
+using System;
+using System.Runtime.CompilerServices;
+using System.Diagnostics;
+
+#pragma warning disable 0660, 0661
+
+namespace Unity.Mathematics
+{
+    [DebuggerTypeProxy(typeof(half4.DebuggerProxy))]
+    public partial struct half4 : System.IEquatable<half4>, IFormattable
+    {
+        public half x;
+        public half y;
+        public half z;
+        public half w;
+
+        /// <summary>half4 zero value.</summary>
+        public static readonly half4 zero;
+
+        /// <summary>Constructs a half4 vector from four half values.</summary>
+        
+        public half4(half x, half y, half z, half w)
+        { 
+            this.x = x;
+            this.y = y;
+            this.z = z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a half4 vector from two half values and a half2 vector.</summary>
+        
+        public half4(half x, half y, half2 zw)
+        { 
+            this.x = x;
+            this.y = y;
+            this.z = zw.x;
+            this.w = zw.y;
+        }
+
+        /// <summary>Constructs a half4 vector from a half value, a half2 vector and a half value.</summary>
+        
+        public half4(half x, half2 yz, half w)
+        { 
+            this.x = x;
+            this.y = yz.x;
+            this.z = yz.y;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a half4 vector from a half value and a half3 vector.</summary>
+        
+        public half4(half x, half3 yzw)
+        { 
+            this.x = x;
+            this.y = yzw.x;
+            this.z = yzw.y;
+            this.w = yzw.z;
+        }
+
+        /// <summary>Constructs a half4 vector from a half2 vector and two half values.</summary>
+        
+        public half4(half2 xy, half z, half w)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+            this.z = z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a half4 vector from two half2 vectors.</summary>
+        
+        public half4(half2 xy, half2 zw)
+        { 
+            this.x = xy.x;
+            this.y = xy.y;
+            this.z = zw.x;
+            this.w = zw.y;
+        }
+
+        /// <summary>Constructs a half4 vector from a half3 vector and a half value.</summary>
+        
+        public half4(half3 xyz, half w)
+        { 
+            this.x = xyz.x;
+            this.y = xyz.y;
+            this.z = xyz.z;
+            this.w = w;
+        }
+
+        /// <summary>Constructs a half4 vector from a half4 vector.</summary>
+        
+        public half4(half4 xyzw)
+        { 
+            this.x = xyzw.x;
+            this.y = xyzw.y;
+            this.z = xyzw.z;
+            this.w = xyzw.w;
+        }
+
+        /// <summary>Constructs a half4 vector from a single half value by assigning it to every component.</summary>
+        
+        public half4(half v)
+        {
+            this.x = v;
+            this.y = v;
+            this.z = v;
+            this.w = v;
+        }
+
+        /// <summary>Constructs a half4 vector from a single float value by converting it to half and assigning it to every component.</summary>
+        
+        public half4(float v)
+        {
+            this.x = (half)v;
+            this.y = (half)v;
+            this.z = (half)v;
+            this.w = (half)v;
+        }
+
+        /// <summary>Constructs a half4 vector from a float4 vector by componentwise conversion.</summary>
+        
+        public half4(float4 v)
+        {
+            this.x = (half)v.x;
+            this.y = (half)v.y;
+            this.z = (half)v.z;
+            this.w = (half)v.w;
+        }
+
+        /// <summary>Constructs a half4 vector from a single double value by converting it to half and assigning it to every component.</summary>
+        
+        public half4(double v)
+        {
+            this.x = (half)v;
+            this.y = (half)v;
+            this.z = (half)v;
+            this.w = (half)v;
+        }
+
+        /// <summary>Constructs a half4 vector from a double4 vector by componentwise conversion.</summary>
+        
+        public half4(double4 v)
+        {
+            this.x = (half)v.x;
+            this.y = (half)v.y;
+            this.z = (half)v.z;
+            this.w = (half)v.w;
+        }
+
+
+        /// <summary>Implicitly converts a single half value to a half4 vector by assigning it to every component.</summary>
+        
+        public static implicit operator half4(half v) { return new half4(v); }
+
+        /// <summary>Explicitly converts a single float value to a half4 vector by converting it to half and assigning it to every component.</summary>
+        
+        public static explicit operator half4(float v) { return new half4(v); }
+
+        /// <summary>Explicitly converts a float4 vector to a half4 vector by componentwise conversion.</summary>
+        
+        public static explicit operator half4(float4 v) { return new half4(v); }
+
+        /// <summary>Explicitly converts a single double value to a half4 vector by converting it to half and assigning it to every component.</summary>
+        
+        public static explicit operator half4(double v) { return new half4(v); }
+
+        /// <summary>Explicitly converts a double4 vector to a half4 vector by componentwise conversion.</summary>
+        
+        public static explicit operator half4(double4 v) { return new half4(v); }
+
+
+        /// <summary>Returns the result of a componentwise equality operation on two half4 vectors.</summary>
+        
+        public static bool4 operator == (half4 lhs, half4 rhs) { return new bool4 (lhs.x == rhs.x, lhs.y == rhs.y, lhs.z == rhs.z, lhs.w == rhs.w); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a half4 vector and a half value.</summary>
+        
+        public static bool4 operator == (half4 lhs, half rhs) { return new bool4 (lhs.x == rhs, lhs.y == rhs, lhs.z == rhs, lhs.w == rhs); }
+
+        /// <summary>Returns the result of a componentwise equality operation on a half value and a half4 vector.</summary>
+        
+        public static bool4 operator == (half lhs, half4 rhs) { return new bool4 (lhs == rhs.x, lhs == rhs.y, lhs == rhs.z, lhs == rhs.w); }
+
+
+        /// <summary>Returns the result of a componentwise not equal operation on two half4 vectors.</summary>
+        
+        public static bool4 operator != (half4 lhs, half4 rhs) { return new bool4 (lhs.x != rhs.x, lhs.y != rhs.y, lhs.z != rhs.z, lhs.w != rhs.w); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a half4 vector and a half value.</summary>
+        
+        public static bool4 operator != (half4 lhs, half rhs) { return new bool4 (lhs.x != rhs, lhs.y != rhs, lhs.z != rhs, lhs.w != rhs); }
+
+        /// <summary>Returns the result of a componentwise not equal operation on a half value and a half4 vector.</summary>
+        
+        public static bool4 operator != (half lhs, half4 rhs) { return new bool4 (lhs != rhs.x, lhs != rhs.y, lhs != rhs.z, lhs != rhs.w); }
+
+
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxxx
+        {
+            
+            get { return new half4(x, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxxy
+        {
+            
+            get { return new half4(x, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxxz
+        {
+            
+            get { return new half4(x, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxxw
+        {
+            
+            get { return new half4(x, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxyx
+        {
+            
+            get { return new half4(x, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxyy
+        {
+            
+            get { return new half4(x, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxyz
+        {
+            
+            get { return new half4(x, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxyw
+        {
+            
+            get { return new half4(x, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxzx
+        {
+            
+            get { return new half4(x, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxzy
+        {
+            
+            get { return new half4(x, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxzz
+        {
+            
+            get { return new half4(x, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxzw
+        {
+            
+            get { return new half4(x, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxwx
+        {
+            
+            get { return new half4(x, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxwy
+        {
+            
+            get { return new half4(x, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxwz
+        {
+            
+            get { return new half4(x, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xxww
+        {
+            
+            get { return new half4(x, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyxx
+        {
+            
+            get { return new half4(x, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyxy
+        {
+            
+            get { return new half4(x, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyxz
+        {
+            
+            get { return new half4(x, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyxw
+        {
+            
+            get { return new half4(x, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyyx
+        {
+            
+            get { return new half4(x, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyyy
+        {
+            
+            get { return new half4(x, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyyz
+        {
+            
+            get { return new half4(x, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyyw
+        {
+            
+            get { return new half4(x, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyzx
+        {
+            
+            get { return new half4(x, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyzy
+        {
+            
+            get { return new half4(x, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyzz
+        {
+            
+            get { return new half4(x, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyzw
+        {
+            
+            get { return new half4(x, y, z, w); }
+            
+            set { x = value.x; y = value.y; z = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xywx
+        {
+            
+            get { return new half4(x, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xywy
+        {
+            
+            get { return new half4(x, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xywz
+        {
+            
+            get { return new half4(x, y, w, z); }
+            
+            set { x = value.x; y = value.y; w = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xyww
+        {
+            
+            get { return new half4(x, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzxx
+        {
+            
+            get { return new half4(x, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzxy
+        {
+            
+            get { return new half4(x, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzxz
+        {
+            
+            get { return new half4(x, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzxw
+        {
+            
+            get { return new half4(x, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzyx
+        {
+            
+            get { return new half4(x, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzyy
+        {
+            
+            get { return new half4(x, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzyz
+        {
+            
+            get { return new half4(x, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzyw
+        {
+            
+            get { return new half4(x, z, y, w); }
+            
+            set { x = value.x; z = value.y; y = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzzx
+        {
+            
+            get { return new half4(x, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzzy
+        {
+            
+            get { return new half4(x, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzzz
+        {
+            
+            get { return new half4(x, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzzw
+        {
+            
+            get { return new half4(x, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzwx
+        {
+            
+            get { return new half4(x, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzwy
+        {
+            
+            get { return new half4(x, z, w, y); }
+            
+            set { x = value.x; z = value.y; w = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzwz
+        {
+            
+            get { return new half4(x, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xzww
+        {
+            
+            get { return new half4(x, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwxx
+        {
+            
+            get { return new half4(x, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwxy
+        {
+            
+            get { return new half4(x, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwxz
+        {
+            
+            get { return new half4(x, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwxw
+        {
+            
+            get { return new half4(x, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwyx
+        {
+            
+            get { return new half4(x, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwyy
+        {
+            
+            get { return new half4(x, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwyz
+        {
+            
+            get { return new half4(x, w, y, z); }
+            
+            set { x = value.x; w = value.y; y = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwyw
+        {
+            
+            get { return new half4(x, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwzx
+        {
+            
+            get { return new half4(x, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwzy
+        {
+            
+            get { return new half4(x, w, z, y); }
+            
+            set { x = value.x; w = value.y; z = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwzz
+        {
+            
+            get { return new half4(x, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwzw
+        {
+            
+            get { return new half4(x, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwwx
+        {
+            
+            get { return new half4(x, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwwy
+        {
+            
+            get { return new half4(x, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwwz
+        {
+            
+            get { return new half4(x, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 xwww
+        {
+            
+            get { return new half4(x, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxxx
+        {
+            
+            get { return new half4(y, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxxy
+        {
+            
+            get { return new half4(y, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxxz
+        {
+            
+            get { return new half4(y, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxxw
+        {
+            
+            get { return new half4(y, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxyx
+        {
+            
+            get { return new half4(y, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxyy
+        {
+            
+            get { return new half4(y, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxyz
+        {
+            
+            get { return new half4(y, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxyw
+        {
+            
+            get { return new half4(y, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxzx
+        {
+            
+            get { return new half4(y, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxzy
+        {
+            
+            get { return new half4(y, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxzz
+        {
+            
+            get { return new half4(y, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxzw
+        {
+            
+            get { return new half4(y, x, z, w); }
+            
+            set { y = value.x; x = value.y; z = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxwx
+        {
+            
+            get { return new half4(y, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxwy
+        {
+            
+            get { return new half4(y, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxwz
+        {
+            
+            get { return new half4(y, x, w, z); }
+            
+            set { y = value.x; x = value.y; w = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yxww
+        {
+            
+            get { return new half4(y, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyxx
+        {
+            
+            get { return new half4(y, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyxy
+        {
+            
+            get { return new half4(y, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyxz
+        {
+            
+            get { return new half4(y, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyxw
+        {
+            
+            get { return new half4(y, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyyx
+        {
+            
+            get { return new half4(y, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyyy
+        {
+            
+            get { return new half4(y, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyyz
+        {
+            
+            get { return new half4(y, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyyw
+        {
+            
+            get { return new half4(y, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyzx
+        {
+            
+            get { return new half4(y, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyzy
+        {
+            
+            get { return new half4(y, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyzz
+        {
+            
+            get { return new half4(y, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyzw
+        {
+            
+            get { return new half4(y, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yywx
+        {
+            
+            get { return new half4(y, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yywy
+        {
+            
+            get { return new half4(y, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yywz
+        {
+            
+            get { return new half4(y, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yyww
+        {
+            
+            get { return new half4(y, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzxx
+        {
+            
+            get { return new half4(y, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzxy
+        {
+            
+            get { return new half4(y, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzxz
+        {
+            
+            get { return new half4(y, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzxw
+        {
+            
+            get { return new half4(y, z, x, w); }
+            
+            set { y = value.x; z = value.y; x = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzyx
+        {
+            
+            get { return new half4(y, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzyy
+        {
+            
+            get { return new half4(y, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzyz
+        {
+            
+            get { return new half4(y, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzyw
+        {
+            
+            get { return new half4(y, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzzx
+        {
+            
+            get { return new half4(y, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzzy
+        {
+            
+            get { return new half4(y, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzzz
+        {
+            
+            get { return new half4(y, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzzw
+        {
+            
+            get { return new half4(y, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzwx
+        {
+            
+            get { return new half4(y, z, w, x); }
+            
+            set { y = value.x; z = value.y; w = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzwy
+        {
+            
+            get { return new half4(y, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzwz
+        {
+            
+            get { return new half4(y, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 yzww
+        {
+            
+            get { return new half4(y, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywxx
+        {
+            
+            get { return new half4(y, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywxy
+        {
+            
+            get { return new half4(y, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywxz
+        {
+            
+            get { return new half4(y, w, x, z); }
+            
+            set { y = value.x; w = value.y; x = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywxw
+        {
+            
+            get { return new half4(y, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywyx
+        {
+            
+            get { return new half4(y, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywyy
+        {
+            
+            get { return new half4(y, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywyz
+        {
+            
+            get { return new half4(y, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywyw
+        {
+            
+            get { return new half4(y, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywzx
+        {
+            
+            get { return new half4(y, w, z, x); }
+            
+            set { y = value.x; w = value.y; z = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywzy
+        {
+            
+            get { return new half4(y, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywzz
+        {
+            
+            get { return new half4(y, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywzw
+        {
+            
+            get { return new half4(y, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywwx
+        {
+            
+            get { return new half4(y, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywwy
+        {
+            
+            get { return new half4(y, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywwz
+        {
+            
+            get { return new half4(y, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 ywww
+        {
+            
+            get { return new half4(y, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxxx
+        {
+            
+            get { return new half4(z, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxxy
+        {
+            
+            get { return new half4(z, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxxz
+        {
+            
+            get { return new half4(z, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxxw
+        {
+            
+            get { return new half4(z, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxyx
+        {
+            
+            get { return new half4(z, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxyy
+        {
+            
+            get { return new half4(z, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxyz
+        {
+            
+            get { return new half4(z, x, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxyw
+        {
+            
+            get { return new half4(z, x, y, w); }
+            
+            set { z = value.x; x = value.y; y = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxzx
+        {
+            
+            get { return new half4(z, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxzy
+        {
+            
+            get { return new half4(z, x, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxzz
+        {
+            
+            get { return new half4(z, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxzw
+        {
+            
+            get { return new half4(z, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxwx
+        {
+            
+            get { return new half4(z, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxwy
+        {
+            
+            get { return new half4(z, x, w, y); }
+            
+            set { z = value.x; x = value.y; w = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxwz
+        {
+            
+            get { return new half4(z, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zxww
+        {
+            
+            get { return new half4(z, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyxx
+        {
+            
+            get { return new half4(z, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyxy
+        {
+            
+            get { return new half4(z, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyxz
+        {
+            
+            get { return new half4(z, y, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyxw
+        {
+            
+            get { return new half4(z, y, x, w); }
+            
+            set { z = value.x; y = value.y; x = value.z; w = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyyx
+        {
+            
+            get { return new half4(z, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyyy
+        {
+            
+            get { return new half4(z, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyyz
+        {
+            
+            get { return new half4(z, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyyw
+        {
+            
+            get { return new half4(z, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyzx
+        {
+            
+            get { return new half4(z, y, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyzy
+        {
+            
+            get { return new half4(z, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyzz
+        {
+            
+            get { return new half4(z, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyzw
+        {
+            
+            get { return new half4(z, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zywx
+        {
+            
+            get { return new half4(z, y, w, x); }
+            
+            set { z = value.x; y = value.y; w = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zywy
+        {
+            
+            get { return new half4(z, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zywz
+        {
+            
+            get { return new half4(z, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zyww
+        {
+            
+            get { return new half4(z, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzxx
+        {
+            
+            get { return new half4(z, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzxy
+        {
+            
+            get { return new half4(z, z, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzxz
+        {
+            
+            get { return new half4(z, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzxw
+        {
+            
+            get { return new half4(z, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzyx
+        {
+            
+            get { return new half4(z, z, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzyy
+        {
+            
+            get { return new half4(z, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzyz
+        {
+            
+            get { return new half4(z, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzyw
+        {
+            
+            get { return new half4(z, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzzx
+        {
+            
+            get { return new half4(z, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzzy
+        {
+            
+            get { return new half4(z, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzzz
+        {
+            
+            get { return new half4(z, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzzw
+        {
+            
+            get { return new half4(z, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzwx
+        {
+            
+            get { return new half4(z, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzwy
+        {
+            
+            get { return new half4(z, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzwz
+        {
+            
+            get { return new half4(z, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zzww
+        {
+            
+            get { return new half4(z, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwxx
+        {
+            
+            get { return new half4(z, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwxy
+        {
+            
+            get { return new half4(z, w, x, y); }
+            
+            set { z = value.x; w = value.y; x = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwxz
+        {
+            
+            get { return new half4(z, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwxw
+        {
+            
+            get { return new half4(z, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwyx
+        {
+            
+            get { return new half4(z, w, y, x); }
+            
+            set { z = value.x; w = value.y; y = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwyy
+        {
+            
+            get { return new half4(z, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwyz
+        {
+            
+            get { return new half4(z, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwyw
+        {
+            
+            get { return new half4(z, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwzx
+        {
+            
+            get { return new half4(z, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwzy
+        {
+            
+            get { return new half4(z, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwzz
+        {
+            
+            get { return new half4(z, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwzw
+        {
+            
+            get { return new half4(z, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwwx
+        {
+            
+            get { return new half4(z, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwwy
+        {
+            
+            get { return new half4(z, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwwz
+        {
+            
+            get { return new half4(z, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 zwww
+        {
+            
+            get { return new half4(z, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxxx
+        {
+            
+            get { return new half4(w, x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxxy
+        {
+            
+            get { return new half4(w, x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxxz
+        {
+            
+            get { return new half4(w, x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxxw
+        {
+            
+            get { return new half4(w, x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxyx
+        {
+            
+            get { return new half4(w, x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxyy
+        {
+            
+            get { return new half4(w, x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxyz
+        {
+            
+            get { return new half4(w, x, y, z); }
+            
+            set { w = value.x; x = value.y; y = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxyw
+        {
+            
+            get { return new half4(w, x, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxzx
+        {
+            
+            get { return new half4(w, x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxzy
+        {
+            
+            get { return new half4(w, x, z, y); }
+            
+            set { w = value.x; x = value.y; z = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxzz
+        {
+            
+            get { return new half4(w, x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxzw
+        {
+            
+            get { return new half4(w, x, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxwx
+        {
+            
+            get { return new half4(w, x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxwy
+        {
+            
+            get { return new half4(w, x, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxwz
+        {
+            
+            get { return new half4(w, x, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wxww
+        {
+            
+            get { return new half4(w, x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyxx
+        {
+            
+            get { return new half4(w, y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyxy
+        {
+            
+            get { return new half4(w, y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyxz
+        {
+            
+            get { return new half4(w, y, x, z); }
+            
+            set { w = value.x; y = value.y; x = value.z; z = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyxw
+        {
+            
+            get { return new half4(w, y, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyyx
+        {
+            
+            get { return new half4(w, y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyyy
+        {
+            
+            get { return new half4(w, y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyyz
+        {
+            
+            get { return new half4(w, y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyyw
+        {
+            
+            get { return new half4(w, y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyzx
+        {
+            
+            get { return new half4(w, y, z, x); }
+            
+            set { w = value.x; y = value.y; z = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyzy
+        {
+            
+            get { return new half4(w, y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyzz
+        {
+            
+            get { return new half4(w, y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyzw
+        {
+            
+            get { return new half4(w, y, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wywx
+        {
+            
+            get { return new half4(w, y, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wywy
+        {
+            
+            get { return new half4(w, y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wywz
+        {
+            
+            get { return new half4(w, y, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wyww
+        {
+            
+            get { return new half4(w, y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzxx
+        {
+            
+            get { return new half4(w, z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzxy
+        {
+            
+            get { return new half4(w, z, x, y); }
+            
+            set { w = value.x; z = value.y; x = value.z; y = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzxz
+        {
+            
+            get { return new half4(w, z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzxw
+        {
+            
+            get { return new half4(w, z, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzyx
+        {
+            
+            get { return new half4(w, z, y, x); }
+            
+            set { w = value.x; z = value.y; y = value.z; x = value.w; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzyy
+        {
+            
+            get { return new half4(w, z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzyz
+        {
+            
+            get { return new half4(w, z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzyw
+        {
+            
+            get { return new half4(w, z, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzzx
+        {
+            
+            get { return new half4(w, z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzzy
+        {
+            
+            get { return new half4(w, z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzzz
+        {
+            
+            get { return new half4(w, z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzzw
+        {
+            
+            get { return new half4(w, z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzwx
+        {
+            
+            get { return new half4(w, z, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzwy
+        {
+            
+            get { return new half4(w, z, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzwz
+        {
+            
+            get { return new half4(w, z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wzww
+        {
+            
+            get { return new half4(w, z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwxx
+        {
+            
+            get { return new half4(w, w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwxy
+        {
+            
+            get { return new half4(w, w, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwxz
+        {
+            
+            get { return new half4(w, w, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwxw
+        {
+            
+            get { return new half4(w, w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwyx
+        {
+            
+            get { return new half4(w, w, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwyy
+        {
+            
+            get { return new half4(w, w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwyz
+        {
+            
+            get { return new half4(w, w, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwyw
+        {
+            
+            get { return new half4(w, w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwzx
+        {
+            
+            get { return new half4(w, w, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwzy
+        {
+            
+            get { return new half4(w, w, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwzz
+        {
+            
+            get { return new half4(w, w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwzw
+        {
+            
+            get { return new half4(w, w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwwx
+        {
+            
+            get { return new half4(w, w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwwy
+        {
+            
+            get { return new half4(w, w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwwz
+        {
+            
+            get { return new half4(w, w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half4 wwww
+        {
+            
+            get { return new half4(w, w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xxx
+        {
+            
+            get { return new half3(x, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xxy
+        {
+            
+            get { return new half3(x, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xxz
+        {
+            
+            get { return new half3(x, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xxw
+        {
+            
+            get { return new half3(x, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xyx
+        {
+            
+            get { return new half3(x, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xyy
+        {
+            
+            get { return new half3(x, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xyz
+        {
+            
+            get { return new half3(x, y, z); }
+            
+            set { x = value.x; y = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xyw
+        {
+            
+            get { return new half3(x, y, w); }
+            
+            set { x = value.x; y = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xzx
+        {
+            
+            get { return new half3(x, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xzy
+        {
+            
+            get { return new half3(x, z, y); }
+            
+            set { x = value.x; z = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xzz
+        {
+            
+            get { return new half3(x, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xzw
+        {
+            
+            get { return new half3(x, z, w); }
+            
+            set { x = value.x; z = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xwx
+        {
+            
+            get { return new half3(x, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xwy
+        {
+            
+            get { return new half3(x, w, y); }
+            
+            set { x = value.x; w = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xwz
+        {
+            
+            get { return new half3(x, w, z); }
+            
+            set { x = value.x; w = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 xww
+        {
+            
+            get { return new half3(x, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yxx
+        {
+            
+            get { return new half3(y, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yxy
+        {
+            
+            get { return new half3(y, x, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yxz
+        {
+            
+            get { return new half3(y, x, z); }
+            
+            set { y = value.x; x = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yxw
+        {
+            
+            get { return new half3(y, x, w); }
+            
+            set { y = value.x; x = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yyx
+        {
+            
+            get { return new half3(y, y, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yyy
+        {
+            
+            get { return new half3(y, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yyz
+        {
+            
+            get { return new half3(y, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yyw
+        {
+            
+            get { return new half3(y, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yzx
+        {
+            
+            get { return new half3(y, z, x); }
+            
+            set { y = value.x; z = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yzy
+        {
+            
+            get { return new half3(y, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yzz
+        {
+            
+            get { return new half3(y, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yzw
+        {
+            
+            get { return new half3(y, z, w); }
+            
+            set { y = value.x; z = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 ywx
+        {
+            
+            get { return new half3(y, w, x); }
+            
+            set { y = value.x; w = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 ywy
+        {
+            
+            get { return new half3(y, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 ywz
+        {
+            
+            get { return new half3(y, w, z); }
+            
+            set { y = value.x; w = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 yww
+        {
+            
+            get { return new half3(y, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zxx
+        {
+            
+            get { return new half3(z, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zxy
+        {
+            
+            get { return new half3(z, x, y); }
+            
+            set { z = value.x; x = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zxz
+        {
+            
+            get { return new half3(z, x, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zxw
+        {
+            
+            get { return new half3(z, x, w); }
+            
+            set { z = value.x; x = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zyx
+        {
+            
+            get { return new half3(z, y, x); }
+            
+            set { z = value.x; y = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zyy
+        {
+            
+            get { return new half3(z, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zyz
+        {
+            
+            get { return new half3(z, y, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zyw
+        {
+            
+            get { return new half3(z, y, w); }
+            
+            set { z = value.x; y = value.y; w = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zzx
+        {
+            
+            get { return new half3(z, z, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zzy
+        {
+            
+            get { return new half3(z, z, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zzz
+        {
+            
+            get { return new half3(z, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zzw
+        {
+            
+            get { return new half3(z, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zwx
+        {
+            
+            get { return new half3(z, w, x); }
+            
+            set { z = value.x; w = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zwy
+        {
+            
+            get { return new half3(z, w, y); }
+            
+            set { z = value.x; w = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zwz
+        {
+            
+            get { return new half3(z, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 zww
+        {
+            
+            get { return new half3(z, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wxx
+        {
+            
+            get { return new half3(w, x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wxy
+        {
+            
+            get { return new half3(w, x, y); }
+            
+            set { w = value.x; x = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wxz
+        {
+            
+            get { return new half3(w, x, z); }
+            
+            set { w = value.x; x = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wxw
+        {
+            
+            get { return new half3(w, x, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wyx
+        {
+            
+            get { return new half3(w, y, x); }
+            
+            set { w = value.x; y = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wyy
+        {
+            
+            get { return new half3(w, y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wyz
+        {
+            
+            get { return new half3(w, y, z); }
+            
+            set { w = value.x; y = value.y; z = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wyw
+        {
+            
+            get { return new half3(w, y, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wzx
+        {
+            
+            get { return new half3(w, z, x); }
+            
+            set { w = value.x; z = value.y; x = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wzy
+        {
+            
+            get { return new half3(w, z, y); }
+            
+            set { w = value.x; z = value.y; y = value.z; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wzz
+        {
+            
+            get { return new half3(w, z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wzw
+        {
+            
+            get { return new half3(w, z, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wwx
+        {
+            
+            get { return new half3(w, w, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wwy
+        {
+            
+            get { return new half3(w, w, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 wwz
+        {
+            
+            get { return new half3(w, w, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half3 www
+        {
+            
+            get { return new half3(w, w, w); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 xx
+        {
+            
+            get { return new half2(x, x); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 xy
+        {
+            
+            get { return new half2(x, y); }
+            
+            set { x = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 xz
+        {
+            
+            get { return new half2(x, z); }
+            
+            set { x = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 xw
+        {
+            
+            get { return new half2(x, w); }
+            
+            set { x = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 yx
+        {
+            
+            get { return new half2(y, x); }
+            
+            set { y = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 yy
+        {
+            
+            get { return new half2(y, y); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 yz
+        {
+            
+            get { return new half2(y, z); }
+            
+            set { y = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 yw
+        {
+            
+            get { return new half2(y, w); }
+            
+            set { y = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 zx
+        {
+            
+            get { return new half2(z, x); }
+            
+            set { z = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 zy
+        {
+            
+            get { return new half2(z, y); }
+            
+            set { z = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 zz
+        {
+            
+            get { return new half2(z, z); }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 zw
+        {
+            
+            get { return new half2(z, w); }
+            
+            set { z = value.x; w = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 wx
+        {
+            
+            get { return new half2(w, x); }
+            
+            set { w = value.x; x = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 wy
+        {
+            
+            get { return new half2(w, y); }
+            
+            set { w = value.x; y = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 wz
+        {
+            
+            get { return new half2(w, z); }
+            
+            set { w = value.x; z = value.y; }
+        }
+
+
+        [System.ComponentModel.EditorBrowsable(System.ComponentModel.EditorBrowsableState.Never)]
+        public half2 ww
+        {
+            
+            get { return new half2(w, w); }
+        }
+
+
+
+        /// <summary>Returns the half element at a specified index.</summary>
+        unsafe public half this[int index]
+        {
+            get
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 4)
+                    throw new System.ArgumentException("index must be between[0...3]");
+#endif
+                fixed (half4* array = &this) { return ((half*)array)[index]; }
+            }
+            set
+            {
+#if ENABLE_UNITY_COLLECTIONS_CHECKS
+                if ((uint)index >= 4)
+                    throw new System.ArgumentException("index must be between[0...3]");
+#endif
+                fixed (half* array = &x) { array[index] = value; }
+            }
+        }
+
+        /// <summary>Returns true if the half4 is equal to a given half4, false otherwise.</summary>
+        
+        public bool Equals(half4 rhs) { return x == rhs.x && y == rhs.y && z == rhs.z && w == rhs.w; }
+
+        /// <summary>Returns true if the half4 is equal to a given half4, false otherwise.</summary>
+        public override bool Equals(object o) { return Equals((half4)o); }
+
+
+        /// <summary>Returns a hash code for the half4.</summary>
+        
+        public override int GetHashCode() { return (int)math.hash(this); }
+
+
+        /// <summary>Returns a string representation of the half4.</summary>
+        
+        public override string ToString()
+        {
+            return string.Format("half4({0}, {1}, {2}, {3})", x, y, z, w);
+        }
+
+        /// <summary>Returns a string representation of the half4 using a specified format and culture-specific format information.</summary>
+        
+        public string ToString(string format, IFormatProvider formatProvider)
+        {
+            return string.Format("half4({0}, {1}, {2}, {3})", x.ToString(format, formatProvider), y.ToString(format, formatProvider), z.ToString(format, formatProvider), w.ToString(format, formatProvider));
+        }
+
+        internal sealed class DebuggerProxy
+        {
+            public half x;
+            public half y;
+            public half z;
+            public half w;
+            public DebuggerProxy(half4 v)
+            {
+                x = v.x;
+                y = v.y;
+                z = v.z;
+                w = v.w;
+            }
+        }
+
+    }
+
+    public static partial class math
+    {
+        /// <summary>Returns a half4 vector constructed from four half values.</summary>
+        
+        public static half4 half4(half x, half y, half z, half w) { return new half4(x, y, z, w); }
+
+        /// <summary>Returns a half4 vector constructed from two half values and a half2 vector.</summary>
+        
+        public static half4 half4(half x, half y, half2 zw) { return new half4(x, y, zw); }
+
+        /// <summary>Returns a half4 vector constructed from a half value, a half2 vector and a half value.</summary>
+        
+        public static half4 half4(half x, half2 yz, half w) { return new half4(x, yz, w); }
+
+        /// <summary>Returns a half4 vector constructed from a half value and a half3 vector.</summary>
+        
+        public static half4 half4(half x, half3 yzw) { return new half4(x, yzw); }
+
+        /// <summary>Returns a half4 vector constructed from a half2 vector and two half values.</summary>
+        
+        public static half4 half4(half2 xy, half z, half w) { return new half4(xy, z, w); }
+
+        /// <summary>Returns a half4 vector constructed from two half2 vectors.</summary>
+        
+        public static half4 half4(half2 xy, half2 zw) { return new half4(xy, zw); }
+
+        /// <summary>Returns a half4 vector constructed from a half3 vector and a half value.</summary>
+        
+        public static half4 half4(half3 xyz, half w) { return new half4(xyz, w); }
+
+        /// <summary>Returns a half4 vector constructed from a half4 vector.</summary>
+        
+        public static half4 half4(half4 xyzw) { return new half4(xyzw); }
+
+        /// <summary>Returns a half4 vector constructed from a single half value by assigning it to every component.</summary>
+        
+        public static half4 half4(half v) { return new half4(v); }
+
+        /// <summary>Returns a half4 vector constructed from a single float value by converting it to half and assigning it to every component.</summary>
+        
+        public static half4 half4(float v) { return new half4(v); }
+
+        /// <summary>Return a half4 vector constructed from a float4 vector by componentwise conversion.</summary>
+        
+        public static half4 half4(float4 v) { return new half4(v); }
+
+        /// <summary>Returns a half4 vector constructed from a single double value by converting it to half and assigning it to every component.</summary>
+        
+        public static half4 half4(double v) { return new half4(v); }
+
+        /// <summary>Return a half4 vector constructed from a double4 vector by componentwise conversion.</summary>
+        
+        public static half4 half4(double4 v) { return new half4(v); }
+
+        /// <summary>Returns a uint hash code of a half4 vector.</summary>
+        
+        public static uint hash(half4 v)
+        {
+            return csum(uint4(v.x.value, v.y.value, v.z.value, v.w.value) * uint4(0x745ED837u, 0x9CDC88F5u, 0xFA62D721u, 0x7E4DB1CFu)) + 0x68EEE0F5u;
+        }
+
+        /// <summary>
+        /// Returns a uint4 vector hash code of a half4 vector.
+        /// When multiple elements are to be hashes together, it can more efficient to calculate and combine wide hash
+        /// that are only reduced to a narrow uint hash at the very end instead of at every step.
+        /// </summary>
+        
+        public static uint4 hashwide(half4 v)
+        {
+            return (uint4(v.x.value, v.y.value, v.z.value, v.w.value) * uint4(0xBC3B0A59u, 0x816EFB5Du, 0xA24E82B7u, 0x45A22087u)) + 0xFC104C3Bu;
+        }
+
+    }
+}
